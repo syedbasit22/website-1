@@ -1,0 +1,1738 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--CSS-->
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--oll carousel-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" />
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" />
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    
+    <!---->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/apple-touch-icon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css"/>
+    <title>TZORT</title>
+<style>
+  .flex-container a:hover,
+  .flex-slider a:hover {
+    outline: none;
+  }
+  .slides,
+  .slides > li,
+  .flex-control-nav,
+  .flex-direction-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .flex-pauseplay span {
+    text-transform: capitalize;
+  }
+  /* ====================================================================================================================
+   * BASE STYLES
+   * ====================================================================================================================*/
+  .flexslider {
+    margin: 0;
+    padding: 0;
+  }
+  .flexslider .slides > li {
+    display: none;
+    height: 420px;
+  }
+  .flexslider .slides img {
+    width: 100%;
+    height: 100% !important;
+    display: block;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .vertical-carousel .slides img{
+    width: 100%;
+    height: 100% !important;
+    display: block;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 15px;
+  }
+  .vertical-carousel .slides li:first-child img{
+    margin-top: 0;
+  }
+  .vertical-carousel .flex-direction-nav{
+    position: absolute;
+    top: 75px;
+    left: 100px;
+  }
+  .vertical-carousel .flex-direction-nav li:first-child{
+    position: absolute;
+    transform: translateY(260px);
+  }
+  .flexslider .slides:after {
+    content: "\0020";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+  }
+  html[xmlns] .flexslider .slides {
+    display: block;
+  }
+  * html .flexslider .slides {
+    height: 1%;
+  }
+  .no-js .flexslider .slides > li:first-child {
+    display: block;
+  }
+  /* ====================================================================================================================
+   * DEFAULT THEME
+   * ====================================================================================================================*/
+  .flexslider {
+    
+    background: #fff;
+    border: 4px solid #fff;
+    position: relative;
+    zoom: 1;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+  }
+  .flexslider .slides {
+    zoom: 1;
+  }
+  .vertical-carousel .slides{
+    width: 100% !important;
+  }
+  .flexslider .slides img {
+    height: auto;
+  }
+  .flex-viewport {
+    max-height: 2000px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+  .loading .flex-viewport {
+    max-height: 300px;
+  }
+  @-moz-document url-prefix() {
+    .loading .flex-viewport {
+      max-height: none;
+    }
+  }
+  .carousel li {
+    margin-right: 5px;
+  }
+  .flex-direction-nav {
+    height: 0;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+  }
+  .flex-direction-nav a {
+    text-decoration: none;
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: -20px 0 0;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    overflow: hidden;
+    opacity: 0;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .flex-direction-nav a:before {
+    font-family: "flexslider-icon";
+    font-size: 40px;
+    display: inline-block;
+    content: '\f001';
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+  }
+  .flex-direction-nav a.flex-next:before {
+    content: url('');
+    background-image: url(./assets/images/detail-page-images/arow.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    height: 34px;
+    width: 30px;
+    filter: invert(56%) sepia(66%) saturate(2811%) hue-rotate(146deg) brightness(88%) contrast(87%);
+  }
+  .vertical-carousel .flex-direction-nav a.flex-next:before{
+    content: url('');
+    background-image: url(./assets/images/detail-page-images/arow.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    height: 37px;
+    width: 28px;
+    filter: invert(56%) sepia(66%) saturate(2811%) hue-rotate(146deg) brightness(88%) contrast(87%);
+    transform: rotate(90deg);
+    
+  }
+  .flex-direction-nav .flex-prev {
+    left: -50px;
+  }
+  .flex-direction-nav .flex-next {
+    right: -50px;
+    text-align: right;
+    background-color: #fff;
+    border-radius: 50%;
+    color: transparent;
+    padding-top: 16px;
+  }
+  .vertical-carousel .flex-direction-nav .flex-next{
+    text-align: start;
+    background-color: #fff;
+    border-radius: 50%;
+    color: transparent;
+    margin-top: -63px;
+  }
+  .flex-direction-nav a.flex-prev{
+    background-color: #fff;
+    border-radius: 50%;
+    color: transparent;
+  }
+  .flex-direction-nav a.flex-prev:before{
+    content: url('');
+    background-image: url(./assets/images/detail-page-images/arow.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    height: 34px;
+    width: 29px;
+    transform: rotate(180deg);
+    filter: invert(56%) sepia(66%) saturate(2811%) hue-rotate(146deg) brightness(88%) contrast(87%);
+  }
+  .vertical-carousel .flex-direction-nav a.flex-prev{
+    background-color: #fff;
+    border-radius: 50%;
+    color: transparent;
+    text-align: end;
+    margin-top: 0px;
+  }
+  .vertical-carousel .flex-direction-nav a.flex-prev:before{
+    content: url('');
+    background-image: url(./assets/images/detail-page-images/arow.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    height: 36px;
+    width: 31px;
+    transform: rotate(-89deg);
+    filter: invert(56%) sepia(66%) saturate(2811%) hue-rotate(146deg) brightness(88%) contrast(87%);
+    margin-top: -4px;
+  }
+  .flexslider:hover .flex-direction-nav .flex-prev {
+    opacity: 1;
+    left: 10px;
+  }
+  .flexslider:hover .flex-direction-nav .flex-prev:hover {
+    opacity: 1;
+  }
+  .flexslider:hover .flex-direction-nav .flex-next {
+    opacity: 1;
+    right: 10px;
+  }
+  .flexslider:hover .flex-direction-nav .flex-next:hover {
+    opacity: 1;
+  }
+  .flex-direction-nav .flex-disabled {
+    opacity: 0!important;
+    filter: alpha(opacity=0);
+    cursor: default;
+    z-index: -1;
+  }
+  .flex-pauseplay a {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    opacity: 0.8;
+    z-index: 10;
+    overflow: hidden;
+    cursor: pointer;
+    color: #000;
+  }
+  .flex-pauseplay a:before {
+    font-family: "flexslider-icon";
+    font-size: 20px;
+    display: inline-block;
+    content: '\f004';
+  }
+  .flex-pauseplay a:hover {
+    opacity: 1;
+  }
+  .flex-pauseplay a.flex-play:before {
+    content: '\f003';
+  }
+  .flex-control-nav {
+    width: 100%;
+    position: absolute;
+    bottom: -40px;
+    text-align: center;
+  }
+  .flex-control-nav li {
+    margin: 0 6px;
+    display: inline-block;
+    zoom: 1;
+    display: inline;
+  }
+  .flex-control-paging li a {
+    width: 11px;
+    height: 11px;
+    display: block;
+    background: #666;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    text-indent: -9999px;
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+  }
+  .flex-control-paging li a:hover {
+    background: #333;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  .flex-control-paging li a.flex-active {
+    background: #000;
+    background: rgba(0, 0, 0, 0.9);
+    cursor: default;
+  }
+  .flex-control-thumbs {
+    margin: 5px 0 0;
+    position: static;
+    overflow: hidden;
+  }
+  .flex-control-thumbs li {
+    width: 25%;
+    float: left;
+    margin: 0;
+  }
+  .flex-control-thumbs img {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: .7;
+    cursor: pointer;
+    
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+  .flex-control-thumbs img:hover {
+    opacity: 1;
+  }
+  .flex-control-thumbs .flex-active {
+    opacity: 1;
+    cursor: default;
+  }
+  /* ====================================================================================================================
+   * RESPONSIVE
+   * ====================================================================================================================*/
+  @media screen and (max-width: 760px) {
+    .flex-direction-nav .flex-prev {
+      opacity: 0;
+      left: 10px;
+    }
+    .flex-direction-nav .flex-next {
+      opacity: 0;
+      right: 10px;
+    }
+  }
+  
+  .product-image-gallery {
+    display: flex;
+  }
+  .product-image-gallery .flexslider .flex-viewport ul li a{
+    width: 100%;
+    height: 500px;
+    display: inline-block;
+  }
+  .product-image-gallery .flexslider .flex-viewport ul li a img{
+    height: 100%;
+    object-fit: cover;
+  }
+  #slider {
+    width: 100%;
+  }
+  #thumbnail-slider {
+    width: 210px;
+    height: 425px;
+    overflow: hidden;
+  }
+  .flexslider.vertical-carousel .slides li {
+    float: none !important;
+    margin-bottom: 5px;
+    height: 90px;
+    width: auto !important;
+  }
+  
+  .flexslider.vertical-carousel:hover .flex-direction-nav .flex-prev {
+    opacity: 1;
+    left: 50%;
+    top: 10px;
+    transform: translate(-50%, 0);
+    transition: unset;
+  }
+  .flexslider.vertical-carousel .flex-viewport {
+    max-height: 800px;
+  }
+  .flexslider.vertical-carousel:hover .flex-direction-nav .flex-next {
+      opacity: 1;
+      left: 2%;
+      transform: translate(-50%, 0);
+      bottom: unset;
+      right: unset;
+      top: unset;
+  }
+      </style>
+  </head>
+  <body>
+    <header>
+        <section class="navigation">
+            <div class="container">
+                <div class="navigation-wraper">
+                    <div class="row">
+                      <div class="col-lg-6 col-md-4 col">
+                        <div class="logo-wraper">
+                          <a class="logo" href="Home.html"><img class="img-fluid" src="assets/images/TZORT-blue-small.png" alt="logo" width="128" height="70"/> </a>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-8 col">
+                        <div class="nav-top">
+                            <div class="navigation-top-link">
+                                <ul>
+                                    <li><a href="listing.html" class="top-link">Hot deals</a></li>
+                                    <li><a href="#" class="top-link">Resort</a></li>
+                                    <li><a href="#" class="top-link">About</a></li>
+                                </ul>
+                            </div>
+                        <div class="navigation-toggle">
+                        <a class="btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                            <i class="fa-solid fa-bars"></i> 
+                          </a>
+                          <div class="user-icon"><i class="fa-solid fa-user"></i></div>
+                        
+                          
+                          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                            <div class="offcanvas-header">
+                              <h5 class="offcanvas-title" id="offcanvasExampleLabel">Tzort</h5>
+                              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                               
+                                  <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-truncate">
+                                            <i class="fs-5 bi-house"></i><span class="ms-1   d-sm-inline">Home</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#submenu1" data-bs-toggle="collapse" class="nav-link text-truncate">
+                                          <i class=" fs-5 bi bi-file-earmark-person"></i><span class="ms-1   d-sm-inline">About</span> </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-truncate">
+                                            <i class="fs-5 bi bi-person-lines-fill"></i><span class="ms-1   d-sm-inline">Contact</span></a>
+                                    </li>
+                                    <li class="dropdown nav-item">
+                                        <a href="#" class="nav-link dropdown-toggle  text-truncate" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fs-5  bi-collection"></i><span class="ms-1   d-sm-inline">Community</span>
+                                        </a>
+                                        <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdown">
+                                            <li><a class="dropdown-item" href="#">New project...</a></li>
+                                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-truncate">
+                                            <i class="fs-5 bi-book"></i><span class="ms-1   d-sm-inline">LearningCenter</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-truncate">
+                                            <i class="fs-5 bi-people-fill"></i><span class="ms-1   d-sm-inline">Testimonials</span> </a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a href="#" class="nav-link text-truncate">
+                                          <i class="fs-5 bi-quote"></i><span class="ms-1   d-sm-inline">Blogs</span> </a>
+                                  </li>
+                                </ul>
+                                </div>
+                          </div>
+                          </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <main>
+    
+                            <!--<div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+           
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img src="assets/images/detail-page-images/slider-image1.jpg" class="d-block w-100" alt="slider">
+                                   
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="assets/images/detail-page-images/slider-image2.jpg" class="d-block w-100" alt="slider">
+                                   
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="assets/images/detail-page-images/slider-image3.jpg" class="d-block w-100" alt="slider">
+                                   
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="assets/images/detail-page-images/slider-image4.jpg" class="d-block w-100" alt="slider">
+            
+                                  </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                  <div class="navigation-arrow-prev">
+                                  <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.889 14.942 8.47 8.36 1.889 1.778" stroke="#5FFF7B" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                  </svg>
+                                </div>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                  <div class="navigation-arrow-next">
+                                  <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.889 14.942 8.47 8.36 1.889 1.778" stroke="#5FFF7B" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                  </svg>
+                                </div>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                              </div>
+                        </div>
+                        <div class="col-lg-3 d-sm-block">
+                          <div class=" slider-bullet">
+                              <div class=" detail-slider carousel-indicators">
+                                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class=" active" aria-current="true" aria-label="Slide 1">
+                                      <img src="assets/images/detail-page-images/slider-image1.jpg" class="d-block w-100" alt="slider">  
+                                  </button>
+                                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2">
+                                      <img src="assets/images/detail-page-images/slider-image2.jpg" class="d-block w-100" alt="slider">
+                                  </button>
+                                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3">
+                                      <img src="assets/images/detail-page-images/slider-image3.jpg" class="d-block w-100" alt="slider">
+                                  </button>
+                                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4">
+                                      <img src="assets/images/detail-page-images/slider-image4.jpg" class="d-block w-100" alt="slider">
+                                  </button>
+                                </div>
+                            
+                          </div>
+                      </div>
+                      
+                      <div class="col-lg-9 col-md-12">
+  <div id="sync1" class="owl-carousel owl-theme">
+    <div class="item fade">
+      <h4>
+        <img
+          src="assets/images/detail-page-images/slider-image1.jpg"
+          alt="landscape"
+        />
+      </h4>
+    </div>
+    <div class="item fade">
+      <h4>
+        <img
+          src="assets/images/detail-page-images/slider-image2.jpg"
+          alt="landscape"
+        />
+      </h4>
+    </div>
+    <div class="item fade">
+      <h4>
+        <img
+          src="assets/images/detail-page-images/slider-image3.jpg"
+          alt="landscape"
+        />
+      </h4>
+    </div>
+    <div class="item fade">
+      <h4>
+        <img
+          src="assets/images/detail-page-images/slider-image4.jpg"
+          alt="landscape"
+        />
+      </h4>
+    </div>
+   
+  </div>
+  </div>
+  <div class="col-lg-3 d-sm-block">
+  <div id="sync2" class="owl-carousel owl-theme vertical">
+    <div class="item">
+      <img
+        src="assets/images/detail-page-images/slider-image1.jpg"
+        alt="landscape"
+      />
+    </div>
+    <div class="item">
+     
+      <img
+        src="assets/images/detail-page-images/slider-image2.jpg"
+        alt="landscape"
+      />
+    </div>
+    <div class="item">
+      <img
+        src="assets/images/detail-page-images/slider-image3.jpg"
+        alt="landscape"
+      />
+    </div>
+    <div class="item">
+      <img
+        src="assets/images/detail-page-images/slider-image4.jpg"
+        alt="landscape"
+      />
+    </div>
+    <div class="item">
+      <img
+        src="assets/images/detail-page-images/slider-image1.jpg"
+        alt="landscape"
+      />
+    </div>
+    <div class="item">
+      
+      <img
+        src="assets/images/detail-page-images/slider-image2.jpg"
+        alt="landscape"
+      />
+    </div>
+    <div class="item">
+      <img
+        src="assets/images/detail-page-images/slider-image3.jpg"
+        alt="landscape"
+      />
+    </div>
+    <div class="item">
+      <img
+        src="assets/images/detail-page-images/slider-image4.jpg"
+        alt="landscape"
+      />
+    </div>
+    
+  </div>
+</div>-->   <section class="detail-slider">
+  <div class="container">
+    <div class="detail-slider-wraper">
+        <div class="row">
+            <div class="col-lg-10 col-md-10">
+              <div id="slider" class="flexslider">
+                <ul class="slides">
+                <li>
+                  <a href="">
+                    <img src ="assets/images/detail-page-images/slider-image1.jpg" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src ="assets/images/detail-page-images/slider-image2.jpg" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src ="assets/images/detail-page-images/slider-image3.jpg" />
+                  </a>
+                </li>
+                        <li><a href="">
+                      <img src="assets/images/detail-page-images/slider-image4.jpg" alt="">
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <img src ="assets/images/detail-page-images/slider-image1.jpg" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <img src ="assets/images/detail-page-images/slider-image2.jpg" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <img src ="assets/images/detail-page-images/slider-image3.jpg" />
+                      </a>
+                    </li>
+                            <li><a href="">
+                          <img src="assets/images/detail-page-images/slider-image4.jpg" alt="">
+                          </a>
+                        </li>
+                </ul>
+              </div>
+                </div>
+                    <div class="col-lg-2 col-md-2">
+                      <div id="thumbnail-slider" class="flexslider vertical-carousel">
+                        <ul class="slides">
+                        <li>
+                          <a href="">
+                            <img src ="assets/images/detail-page-images/slider-image1.jpg" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="">
+                            <img src ="assets/images/detail-page-images/slider-image2.jpg" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="">
+                            <img src ="assets/images/detail-page-images/slider-image3.jpg" />
+                          </a>
+                        </li>
+                          <li>
+                            <a href="">
+                            <img src="assets/images/detail-page-images/slider-image4.jpg" alt="">
+                            </a>
+                          </li>
+                          <li>
+                            <a href="">
+                              <img src ="assets/images/detail-page-images/slider-image1.jpg" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="">
+                              <img src ="assets/images/detail-page-images/slider-image2.jpg" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="">
+                              <img src ="assets/images/detail-page-images/slider-image3.jpg" />
+                            </a>
+                          </li>
+                            <li>
+                              <a href="">
+                              <img src="assets/images/detail-page-images/slider-image4.jpg" alt="">
+                              </a>
+                            </li>
+                            
+                        
+                        </ul>
+                      </div>
+                    </div>
+
+                </div>
+            </div>
+          </div>
+        </section>
+        <section class="product-detail">
+            <div class="container">
+                <div class="product-detail-wraper">
+                    <div class="row">
+                        <div class="col-lg-8 position-relative">
+                            <div class="detail-header">
+                                <div class="header-content">
+                                    <div class="breadcrumb-content">
+                                        <nav>
+                                            <ol class="breadcrumb">
+                                              <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                              <li class="breadcrumb-item"><a href="#">Products</a></li>
+                                              <li class="breadcrumb-item"><a href="#">Architecture</a></li>
+                                              <li class="breadcrumb-item active" aria-current="page">Library</li>
+                                            </ol>
+                                        </nav>
+                                    </div>
+                                    <div class="header-title">Sight Seeing Tour of Taj Mahal</div>
+                                    <div class="header-review">
+                                        <div class="review-star">
+                                            <i class="bi bi-star"></i>
+                                            <i class="bi bi-star"></i>
+                                            <i class="bi bi-star"></i>
+                                            <i class="bi bi-star"></i>
+                                            <i class="bi bi-star"></i>
+                                        </div>
+                                        <div class="review-text">1 Review</div>
+                                    </div>
+                                </div>
+                                <div class="header-action">
+                                    <div class="action">
+                                        <a class="action-button-link share" href="#">
+                                            <i class="bi bi-box-arrow-up"></i>
+                                        </a>
+                                    </div>
+                                    <div class="action">
+                                        <a class="action-button-link heart" href="#">
+                                            <i class="bi bi-suit-heart-fill"></i>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="sub-menu">
+                                <nav id="navbar-example2" class="sub-menu-navigation navbar-expand-md">
+                                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <i class="bi bi-list"></i>
+                                  </button>
+                                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <ul class="sub-menu-nav navbar-nav ">
+                                        <li class="sub-menu-item">
+                                            <a class="sub-menu-link active" href="#tour-detail">Overview</a>
+                                        </li>
+                                        <li class="sub-menu-item">
+                                            <a class="sub-menu-link" href="#itinerary">Itinerary</a>
+                                        </li>
+                                        <li class="sub-menu-item">
+                                            <a class="sub-menu-link" href="#inclusions">Inclusions</a>
+                                        </li>
+                                        <li class="sub-menu-item">
+                                            <a class="sub-menu-link" href="#reviews">Reviews</a>
+                                        </li>
+                                        <li class="sub-menu-item">
+                                            <a class="sub-menu-link" href="#faq">FAQ</a>
+                                        </li>
+                                        <li class="sub-menu-item">
+                                            <a class="sub-menu-link" href="#essential-info">Essential Info</a>
+                                        </li>
+                                    </ul>
+                                  </div>
+                                </nav>
+                            </div>
+                            <div class="section tour-detail" id="tour-detail">
+                                <div class="tour-detail-icon">
+                                    <svg width="41" height="51" viewBox="0 0 41 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M40.327 13.61H28.296c-.334 0-.558-.221-.558-.55l.002-11.852c0-.329.224-.55.558-.55.334 0 .558.221.558.55l-.002 11.304h11.473c.334 0 .558.22.558.55 0 .33-.224.547-.558.547z" fill="#99A3AD"></path>
+                                        <path d="M36.54 50.707H4.568C2.005 50.707 0 48.73 0 46.207L.002 5.047c0-2.525 2.005-4.5 4.568-4.5h23.728c.11 0 .334.109.445.109L40.885 12.51c.11.11.11.22.11.439v33.255c.113 2.527-1.892 4.503-4.455 4.503zM4.568 1.756c-1.892 0-3.342 1.428-3.342 3.292v41.158c0 1.867 1.56 3.402 3.453 3.402H36.65c1.894 0 3.453-1.537 3.453-3.402l.002-32.926-11.92-11.524H4.567z" fill="#99A3AD"></path>
+                                        <path d="M33.309 19.756h-19.27c-.335 0-.558-.22-.558-.55 0-.329.223-.549.557-.549h19.273c.334 0 .558.22.558.55-.002.329-.226.55-.56.55zM33.309 25.133H7.91c-.334 0-.558-.22-.558-.55 0-.328.224-.549.558-.549h25.399c.334 0 .558.22.558.55 0 .331-.224.55-.558.55zM33.309 30.622H7.91c-.334 0-.558-.22-.558-.55 0-.329.224-.55.558-.55h25.399c.334 0 .558.221.558.55 0 .33-.224.55-.558.55zM33.309 36.11H7.91c-.334 0-.558-.22-.558-.55 0-.329.224-.549.558-.549h25.399c.334 0 .558.22.558.55 0 .329-.224.55-.558.55zM33.309 41.487H7.91c-.334 0-.558-.22-.558-.549 0-.33.224-.55.558-.55h25.399c.334 0 .558.22.558.55 0 .33-.224.55-.558.55z" fill="#99A3AD"></path>
+                                    </svg>
+                                </div>
+                                <div class="tour-detail-text">
+                                    <div class="tour-descruption">
+                                        <p>
+                                            Dolor elit voluptate cupidatat in eiusmod. <strong>Emprise Tours</strong>&nbsp;ex eu incididunt etile pariatur dolor mollit reprehenderit magna tempor ex minim velit sunt do.Dolor elit voluptate cupidatat in eiusmod. Eiusmod ex eu incididunt etile pariatur dolor mollit reprehenderit magna tempor ex minim velit sunt do. Elit dolore sunt cupidatat minim nisinulla fugiat sit dolor adipisicing excepteur eiusmod.
+                        Mollit reprehenderit magna tempor ex.</p>
+                                    </div>
+                                    <div class="tour-group-detailset">
+                                        <div class="icon-group-detail">
+                                            <span class="group-label">Duration</span>
+                                            <div class="group-icon">
+                                                <i class="fa-regular fa-clock"></i>
+                                                8 Hours
+                                            </div>
+                                        </div>
+                                        <div class="icon-group-detail">
+                                            <span class="group-label">Activity</span>
+                                            <div class="group-icon">
+                                                <i class="fa-solid fa-street-view"></i>
+                                                Guided sightseeing
+                                            </div>
+                                        </div>
+                                        <div class="icon-group-detail">
+                                            <span class="group-label">Physical</span>
+                                            <div class="group-icon">
+                                                <i class="fa-solid fa-mountain"></i>
+                                                challenging
+                                            </div>
+                                        </div>
+                                        <div class="icon-group-detail">
+                                            <span class="group-label">Group Size</span>
+                                            <div class="group-icon">
+                                                <i class="bi bi-person-add"></i>
+                                                514
+                                            </div>
+                                        </div>
+                                        <div class="icon-group-detail">
+                                            <span class="group-label">Age</span>
+                                            <div class="group-icon">
+                                                <i class="fa-solid fa-cake-candles"></i>
+                                                18+
+                                            </div>
+                                        </div>
+                                        <div class="icon-group-detail">
+                                            <span class="group-label">Location</span>
+                                            <div class="group-icon">
+                                                <i class="bi bi-geo-alt"></i>
+                                                Agra
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section itinerary" id="itinerary">
+                                <div class="itinerary-icon">
+                                    <svg width="43" height="38" viewBox="0 0 43 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M43 .442c0-.016-.008-.03-.01-.047-.002-.015.003-.031 0-.047-.003-.014-.013-.024-.018-.037a.372.372 0 0 0-.035-.082.41.41 0 0 0-.177-.172.409.409 0 0 0-.08-.031.397.397 0 0 0-.085-.017C42.581.007 42.568 0 42.553 0c-.018 0-.032.008-.049.01-.016.002-.031-.003-.047 0L28.519 3.04 14.577.01h-.007c-.015-.003-.033 0-.05-.002-.013 0-.024-.008-.039-.008-.013 0-.025.006-.037.008-.018 0-.037 0-.054.003h-.004L.35 3.06c-.013.003-.024.013-.037.017a.44.44 0 0 0-.152.082.389.389 0 0 0-.059.062.438.438 0 0 0-.046.068.459.459 0 0 0-.049.165c0 .014-.008.025-.008.04v34.063c0 .017.008.03.01.047s-.001.03.002.047c.004.016.013.028.018.043a.377.377 0 0 0 .08.141c.014.017.026.033.042.047.026.023.056.04.087.058.017.009.031.02.049.026a.448.448 0 0 0 .255.022l13.94-3.03 13.94 3.03c.032.008.064.011.095.011.005 0 .01-.003.014-.003a.432.432 0 0 0 .082-.008l14.036-3.05c.014-.002.024-.012.037-.017a.47.47 0 0 0 .152-.082.44.44 0 0 0 .056-.06.43.43 0 0 0 .049-.07.432.432 0 0 0 .03-.075.374.374 0 0 0 .018-.089c0-.014.008-.025.008-.04V.443zM.894 3.85 14.037.993v16.584a.446.446 0 0 0-.272.136.44.44 0 0 0 .032.625c.082.073.158.151.24.225v15.589L.894 37.008V3.85zM14.93 19.413c.275.273.544.544.785.792a.448.448 0 0 0 .63.011.44.44 0 0 0 .012-.625 48.965 48.965 0 0 0-1.427-1.407V.993l13.144 2.856v21.217c-.259.11-.517.208-.776.284a.44.44 0 0 0 .125.866.446.446 0 0 0 .126-.019c.174-.051.35-.113.525-.178v10.988l-13.144-2.856V19.413zm14.036 6.215a9.751 9.751 0 0 0 1.137-.678.44.44 0 0 0 .11-.616.448.448 0 0 0-.62-.11 9.369 9.369 0 0 1-.627.398V3.85L42.108.993v33.159l-13.143 2.855V25.628z" fill="#99A3AD"></path>
+                                        <path d="M5.452 26.484a26.968 26.968 0 0 1-.167-.966.445.445 0 0 0-.508-.37.442.442 0 0 0-.373.504c.055.352.105.634.147.857a2.365 2.365 0 0 0-1.848 2.297 2.37 2.37 0 0 0 2.378 2.358 2.37 2.37 0 0 0 2.378-2.358c-.001-1.174-.873-2.143-2.007-2.322zM5.08 30.28c-.82 0-1.487-.661-1.487-1.474S4.26 27.33 5.08 27.33c.82 0 1.486.662 1.486 1.475 0 .813-.667 1.474-1.486 1.474zM38.218 6.8l1.051-1.043a.44.44 0 0 0 0-.625.449.449 0 0 0-.63 0l-1.051 1.043-1.05-1.043a.449.449 0 0 0-.631 0 .44.44 0 0 0 0 .625L36.958 6.8l-1.051 1.043a.44.44 0 0 0 .316.755.45.45 0 0 0 .315-.13l.66-.656c.005.106.01.204.013.323.006.24.204.432.445.432h.012a.444.444 0 0 0 .434-.453l-.006-.185.542.539a.45.45 0 0 0 .631 0 .44.44 0 0 0 0-.626L38.22 6.8zM12.178 15.992c-.9-.55-1.764-.9-2.644-1.073a.441.441 0 1 0-.173.867c.773.152 1.542.466 2.35.959a.448.448 0 0 0 .613-.146.44.44 0 0 0-.146-.607zM4.551 23.348l.028-.001a.445.445 0 0 0 .418-.468 21.743 21.743 0 0 1-.042-1.335c0-.433.014-.869.048-1.3a.443.443 0 0 0-.41-.475c-.244-.032-.46.164-.479.406-.036.453-.05.913-.05 1.369 0 .47.015.938.043 1.388.014.235.21.416.444.416zM4.94 17.99a.447.447 0 0 0 .577-.254c.34-.877.834-1.479 1.47-1.788a.44.44 0 0 0 .202-.592.448.448 0 0 0-.596-.202c-.844.411-1.486 1.174-1.908 2.265a.439.439 0 0 0 .255.57zM18.24 21.53a.45.45 0 0 0-.63-.004.44.44 0 0 0-.003.626 27.948 27.948 0 0 0 2.017 1.868.444.444 0 0 0 .628-.057.44.44 0 0 0-.057-.623 27.215 27.215 0 0 1-1.954-1.81zM37.629 10.418a.443.443 0 0 0-.478.41c-.07.942-.19 1.822-.357 2.612a.442.442 0 0 0 .438.533c.206 0 .39-.143.435-.351.175-.828.301-1.746.374-2.729a.446.446 0 0 0-.412-.475zM36.584 15.69a.447.447 0 0 0-.594.209c-.051.105-.104.209-.16.311-.306.561-.686 1.257-1.138 2.015a.44.44 0 0 0 .157.606.45.45 0 0 0 .611-.155c.459-.77.845-1.476 1.155-2.045.062-.115.123-.232.18-.35a.44.44 0 0 0-.211-.59zM33.236 20.46a20.156 20.156 0 0 1-1.677 2.046.441.441 0 0 0 .326.745.446.446 0 0 0 .325-.14c.585-.62 1.174-1.339 1.75-2.137a.44.44 0 0 0-.102-.616.446.446 0 0 0-.622.101zM24.791 25.553a7.526 7.526 0 0 1-2.417-.754.446.446 0 0 0-.631.222.44.44 0 0 0 .21.558l.017.01c.904.448 1.816.731 2.712.842a.445.445 0 0 0 .498-.384.443.443 0 0 0-.389-.494z" fill="#99A3AD"></path>
+                                    </svg>
+                                </div>
+                                <div class="itinerary-detail">
+                                    <div class="accordion" id="accordionExample">
+                                        <div class="accordion-item">
+                                          <h2 class="accordion-header" id="headingOne">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                             <span class="list-num">1</span>
+                                             Highlight 1
+                                            </button>
+                                          </h2>
+                                          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="accordion-title">Start with day tour of valley</div>
+                                                <div class="accordion-descuption">Dolor elit voluptate cupidatat in eiusmod. Eiusmod ex eu incididunt etile pariatur dolor mollit reprehenderit magna tempor ex minim velit sunt do.</div>
+                                                <div class="accordion-media">
+                                                    <img class="img-fluid" src="assets/images/detail-page-images/accordian-media.avif"/>
+                                                </div>
+                                                <div class="accordion-tabs">
+                                                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                                        <li class="nav-item" role="presentation">
+                                                          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Accommodation</button>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                          <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Meals</button>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                          <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Inclusions</button>
+                                                        </li>
+                                                      </ul>
+                                                      <div class="tab-content" id="pills-tabContent">
+                                                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">Dolor elit voluptate cupidatat in eiusmod. Eiusmod ex eu incididunt etile pariatur dolor mollit reprehenderit magna tempor ex minim velit sunt do.</div>
+                                                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">Dolor elit voluptate cupidatat in eiusmod. Eiusmod ex eu incididunt etile pariatur dolor mollit reprehenderit magna tempor ex minim velit sunt do.</div>
+                                                        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">Dolor elit voluptate cupidatat in eiusmod. Eiusmod ex eu incididunt etile pariatur dolor mollit reprehenderit magna tempor ex minim velit sunt do.</div>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                          <h2 class="accordion-header" id="headingTwo">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                              <span class="list-num">2</span>
+                                              Highlight 2
+                                            </button>
+                                          </h2>
+                                          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                              <div class="accordion-title">Settle down with local tea</div>
+                                              <div class="accordion-descuption">Dolor elit voluptate cupidatat in eiusmod. Eiusmod ex eu incididunt etile pariatur dolor mollit reprehenderit magna tempor ex minim velit sunt do.</div>
+                                              <div class="accordion-media">
+                                                  <img class="img-fluid" src="assets/images/detail-page-images/accordian-media.avif"/>
+                                              </div>
+                                              <div class="accordion-tabs">
+                                                  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                                      <li class="nav-item" role="presentation">
+                                                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Accommodation</button>
+                                                      </li>
+                                                      <li class="nav-item" role="presentation">
+                                                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Meals</button>
+                                                      </li>
+                                                      <li class="nav-item" role="presentation">
+                                                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Inclusions</button>
+                                                      </li>
+                                                    </ul>
+                                                    <div class="tab-content" id="pills-tabContent">
+                                                      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">Dolor elit voluptate cupidatat in eiusmod. Eiusmod ex eu incididunt etile pariatur dolor mollit reprehenderit magna tempor ex minim velit sunt do.</div>
+                                                      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">Dolor elit voluptate cupidatat in eiusmod. Eiusmod ex eu incididunt etile pariatur dolor mollit reprehenderit magna tempor ex minim velit sunt do.</div>
+                                                      <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">Dolor elit voluptate cupidatat in eiusmod. Eiusmod ex eu incididunt etile pariatur dolor mollit reprehenderit magna tempor ex minim velit sunt do.</div>
+                                                    </div>
+                                              </div>
+                                          </div>
+                                          </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                          <h2 class="accordion-header" id="headingThree">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                              <span class="list-num">3</span>
+                                              Highlight 3
+                                            </button>
+                                          </h2>
+                                          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                              <div class="accordion-title">Settle down with local tea</div>
+                                              <div class="accordion-descuption">Dolor elit voluptate cupidatat in eiusmod. Eiusmod ex eu incididunt etile pariatur dolor mollit reprehenderit magna tempor ex minim velit sunt do.</div>
+                                              <div class="accordion-media">
+                                                  <img class="img-fluid" src="assets/images/detail-page-images/accordian-media.avif"/>
+                                              </div>
+                                              <div class="accordion-tabs">
+                                                  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                                      <li class="nav-item" role="presentation">
+                                                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Accommodation</button>
+                                                      </li>
+                                                      <li class="nav-item" role="presentation">
+                                                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Meals</button>
+                                                      </li>
+                                                      <li class="nav-item" role="presentation">
+                                                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Inclusions</button>
+                                                      </li>
+                                                    </ul>
+                                                    <div class="tab-content" id="pills-tabContent">
+                                                      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">Dolor elit voluptate cupidatat in eiusmod. Eiusmod ex eu incididunt etile pariatur dolor mollit reprehenderit magna tempor ex minim velit sunt do.</div>
+                                                      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">Dolor elit voluptate cupidatat in eiusmod. Eiusmod ex eu incididunt etile pariatur dolor mollit reprehenderit magna tempor ex minim velit sunt do.</div>
+                                                      <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">Dolor elit voluptate cupidatat in eiusmod. Eiusmod ex eu incididunt etile pariatur dolor mollit reprehenderit magna tempor ex minim velit sunt do.</div>
+                                                    </div>
+                                              </div>
+                                          </div>
+                                          </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                          <h2 class="accordion-header" id="headingfour">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                                             <span class="list-num">4</span>
+                                             Highlight 4
+                                            </button>
+                                          </h2>
+                                          <div id="collapsefour" class="accordion-collapse collapse" aria-labelledby="headingfour" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="accordion-title">Start with day tour of valley</div>
+                                                <div class="accordion-descuption">Dolor elit voluptate cupidatat in eiusmod. Eiusmod ex eu incididunt etile pariatur dolor mollit reprehenderit magna tempor ex minim velit sunt do.</div>
+                                                <div class="accordion-media">
+                                                    <img class="img-fluid" src="assets/images/detail-page-images/accordian-media.avif"/>
+                                                </div>
+                                                <div class="accordion-tabs">
+                                                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                                        <li class="nav-item" role="presentation">
+                                                          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Accommodation</button>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                          <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Meals</button>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                          <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Inclusions</button>
+                                                        </li>
+                                                      </ul>
+                                                      <div class="tab-content" id="pills-tabContent">
+                                                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">Dolor elit voluptate cupidatat in eiusmod. Eiusmod ex eu incididunt etile pariatur dolor mollit reprehenderit magna tempor ex minim velit sunt do.</div>
+                                                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">Dolor elit voluptate cupidatat in eiusmod. Eiusmod ex eu incididunt etile pariatur dolor mollit reprehenderit magna tempor ex minim velit sunt do.</div>
+                                                        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">Dolor elit voluptate cupidatat in eiusmod. Eiusmod ex eu incididunt etile pariatur dolor mollit reprehenderit magna tempor ex minim velit sunt do.</div>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                          <h2 class="accordion-header" id="headingfive">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                              <span class="list-num">5</span>
+                                              Highlight 5
+                                            </button>
+                                          </h2>
+                                          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingfive" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                              <div class="accordion-title">Settle down with local tea</div>
+                                              <div class="accordion-descuption">Dolor elit voluptate cupidatat in eiusmod. Eiusmod ex eu incididunt etile pariatur dolor mollit reprehenderit magna tempor ex minim velit sunt do.</div>
+                                              <div class="accordion-media">
+                                                  <img class="img-fluid" src="assets/images/detail-page-images/accordian-media.avif"/>
+                                              </div>
+                                              <div class="accordion-tabs">
+                                                  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                                      <li class="nav-item" role="presentation">
+                                                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Accommodation</button>
+                                                      </li>
+                                                      <li class="nav-item" role="presentation">
+                                                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Meals</button>
+                                                      </li>
+                                                      <li class="nav-item" role="presentation">
+                                                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Inclusions</button>
+                                                      </li>
+                                                    </ul>
+                                                    <div class="tab-content" id="pills-tabContent">
+                                                      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">Dolor elit voluptate cupidatat in eiusmod. Eiusmod ex eu incididunt etile pariatur dolor mollit reprehenderit magna tempor ex minim velit sunt do.</div>
+                                                      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">Dolor elit voluptate cupidatat in eiusmod. Eiusmod ex eu incididunt etile pariatur dolor mollit reprehenderit magna tempor ex minim velit sunt do.</div>
+                                                      <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">Dolor elit voluptate cupidatat in eiusmod. Eiusmod ex eu incididunt etile pariatur dolor mollit reprehenderit magna tempor ex minim velit sunt do.</div>
+                                                    </div>
+                                              </div>
+                                          </div>
+                                          </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                          <h2 class="accordion-header" id="headingsix">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                              <span class="list-num">6</span>
+                                              Highlight 6
+                                            </button>
+                                          </h2>
+                                          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingsix" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                              <div class="accordion-title">Settle down with local tea</div>
+                                              <div class="accordion-descuption">Dolor elit voluptate cupidatat in eiusmod. Eiusmod ex eu incididunt etile pariatur dolor mollit reprehenderit magna tempor ex minim velit sunt do.</div>
+                                              <div class="accordion-media">
+                                                  <img class="img-fluid" src="assets/images/detail-page-images/accordian-media.avif"/>
+                                              </div>
+                                              <div class="accordion-tabs">
+                                                  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                                      <li class="nav-item" role="presentation">
+                                                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Accommodation</button>
+                                                      </li>
+                                                      <li class="nav-item" role="presentation">
+                                                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Meals</button>
+                                                      </li>
+                                                      <li class="nav-item" role="presentation">
+                                                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Inclusions</button>
+                                                      </li>
+                                                    </ul>
+                                                    <div class="tab-content" id="pills-tabContent">
+                                                      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">Dolor elit voluptate cupidatat in eiusmod. Eiusmod ex eu incididunt etile pariatur dolor mollit reprehenderit magna tempor ex minim velit sunt do.</div>
+                                                      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">Dolor elit voluptate cupidatat in eiusmod. Eiusmod ex eu incididunt etile pariatur dolor mollit reprehenderit magna tempor ex minim velit sunt do.</div>
+                                                      <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">Dolor elit voluptate cupidatat in eiusmod. Eiusmod ex eu incididunt etile pariatur dolor mollit reprehenderit magna tempor ex minim velit sunt do.</div>
+                                                    </div>
+                                              </div>
+                                          </div>
+                                          </div>
+                                        </div>
+                                       
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="section inclusions" id="inclusions">
+                              <div class="inclusion-icon">
+                                <svg width="50" height="56" viewBox="0 0 50 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M25.0157 0.127686H24.9679C21.6869 0.129864 18.4385 0.787955 15.4081 2.06438C12.3776 3.34081 9.62461 5.21058 7.30612 7.56694C4.98764 9.92329 3.14911 12.7201 1.89553 15.7976C0.641942 18.8752 -0.00215716 22.1732 5.42768e-06 25.5034C0.000252218 25.6667 0.0590139 25.8244 0.165333 25.9469C0.271652 26.0695 0.41827 26.1487 0.577845 26.1696C0.737421 26.1906 0.89906 26.1519 1.03262 26.0609C1.16618 25.9698 1.26255 25.8325 1.30374 25.6746C1.47986 24.998 2.10654 23.0634 2.89022 22.2039C3.99055 21.1594 5.33307 20.6056 6.77668 20.6172C8.20636 20.6136 9.57983 21.182 10.5995 22.1992C11.6258 23.3104 12.1684 24.6663 12.1684 26.1199C12.1684 26.2984 12.2382 26.4695 12.3626 26.5957C12.4869 26.7219 12.6555 26.7928 12.8313 26.7928C13.0071 26.7928 13.1758 26.7219 13.3001 26.5957C13.4244 26.4695 13.4942 26.2984 13.4942 26.1199C13.4942 24.6681 14.035 23.3147 15.058 22.2046C16.1518 21.1661 17.4853 20.6173 18.9187 20.6173C19.6312 20.6115 20.3379 20.7482 20.9984 21.0196C21.6589 21.2911 22.2602 21.6919 22.768 22.1993C23.7943 23.3105 24.3369 24.6665 24.3369 26.1199V44.326C24.3369 45.5699 23.8501 46.7629 22.9835 47.6424C22.1169 48.522 20.9416 49.0162 19.7161 49.0162C18.4905 49.0162 17.3152 48.522 16.4486 47.6424C15.582 46.7629 15.0952 45.5699 15.0952 44.326V42.1116C15.0952 41.9331 15.0253 41.762 14.901 41.6358C14.7767 41.5096 14.6081 41.4387 14.4323 41.4387C14.2565 41.4387 14.0878 41.5096 13.9635 41.6358C13.8392 41.762 13.7694 41.9331 13.7694 42.1116V44.326C13.7694 45.9268 14.3959 47.4621 15.5111 48.594C16.6263 49.7259 18.1389 50.3619 19.7161 50.3619C21.2932 50.3619 22.8058 49.7259 23.921 48.594C25.0362 47.4621 25.6628 45.9268 25.6628 44.326V26.1199C25.6628 24.6679 26.2034 23.3148 27.2265 22.2051C28.3203 21.1667 29.6536 20.6179 31.0872 20.6179H31.1138C32.5435 20.6143 33.917 21.1828 34.9366 22.2C35.9629 23.3111 36.5055 24.6665 36.5055 26.1206C36.5055 26.2991 36.5754 26.4702 36.6997 26.5964C36.824 26.7226 36.9926 26.7935 37.1685 26.7935C37.3443 26.7935 37.5129 26.7226 37.6372 26.5964C37.7615 26.4702 37.8314 26.2991 37.8314 26.1206C37.8314 24.6689 38.372 23.3155 39.3952 22.2052C40.489 21.1667 41.8224 20.618 43.2557 20.618H43.2824C44.7121 20.6144 46.0856 21.1827 47.1053 22.1999C47.8914 23.0567 48.5195 24.9971 48.6963 25.6745C48.7375 25.8324 48.8338 25.9697 48.9674 26.0608C49.101 26.1518 49.2626 26.1905 49.4222 26.1695C49.5818 26.1486 49.7284 26.0694 49.8347 25.9468C49.941 25.8242 49.9998 25.6665 50 25.5032V25.4707C49.9958 18.7479 47.3617 12.3019 42.6767 7.5496C37.9917 2.79732 31.6392 0.127744 25.0157 0.127686ZM48.0616 21.268C48.0558 21.2616 48.0497 21.2553 48.0435 21.2491C46.7765 19.9788 45.0662 19.2682 43.2853 19.272H43.2522C41.4716 19.272 39.8184 19.9522 38.4714 21.239C38.4617 21.2483 38.4522 21.258 38.443 21.2678C37.9254 21.8213 37.4952 22.4528 37.168 23.1398C36.841 22.4529 36.4112 21.8214 35.8938 21.268C35.8878 21.2616 35.8817 21.2552 35.8757 21.2491C34.6086 19.9788 32.8983 19.2682 31.1173 19.272H31.0842C29.3035 19.272 27.6503 19.9522 26.3035 21.239C26.2937 21.2483 26.2843 21.2579 26.2752 21.2677C25.7574 21.8211 25.3272 22.4525 24.9998 23.1395C24.6726 22.4525 24.2425 21.821 23.7248 21.2675C23.7189 21.2611 23.7129 21.2548 23.7067 21.2487C22.4397 19.9784 20.7294 19.2678 18.9485 19.2716H18.9154C17.1347 19.2716 15.4816 19.9517 14.1344 21.2386C14.1247 21.2479 14.1152 21.2575 14.106 21.2674C13.5885 21.8209 13.1586 22.4525 12.8314 23.1395C12.5042 22.4524 12.0741 21.821 11.5564 21.2675C11.5505 21.2611 11.5445 21.2548 11.5383 21.2487C10.2714 19.9785 8.56139 19.2678 6.78066 19.2715H6.74751C4.9668 19.2715 3.3136 19.9516 1.96655 21.2385C1.95683 21.2478 1.94733 21.2574 1.93816 21.2674C1.82613 21.3891 1.72132 21.5174 1.62426 21.6517C2.52389 16.0239 5.36592 10.9042 9.64244 7.20767C13.9189 3.51112 19.3512 1.47861 24.9683 1.47341H24.9998C25.0051 1.47273 25.0105 1.47273 25.0157 1.47341C30.6357 1.47473 36.0719 3.50557 40.3517 7.20259C44.6315 10.8996 47.4758 16.0216 48.3756 21.6523C48.2785 21.518 48.1737 21.3896 48.0616 21.268Z" fill="#99A3AD"></path>
+                                  <path d="M49.6287 34.0793L39.8939 29.2311C39.8032 29.1859 39.7034 29.1624 39.6023 29.1624C39.5011 29.1624 39.4014 29.1859 39.3106 29.2311L29.5758 34.0655C29.4644 34.1209 29.3705 34.2069 29.3048 34.3137C29.2391 34.4206 29.2043 34.544 29.2043 34.67V43.919C29.2043 44.9461 29.4805 46.0925 30.0031 47.2341C30.6726 48.6962 31.6698 49.9592 32.739 50.6977L39.2287 55.1857C39.3387 55.2618 39.4688 55.3025 39.6019 55.3025C39.7351 55.3025 39.8651 55.2618 39.9751 55.1857L46.465 50.6976C48.447 49.3275 49.9997 46.3499 49.9997 43.9189V34.6834C49.9997 34.5576 49.9649 34.4343 49.8993 34.3275C49.8337 34.2207 49.74 34.1347 49.6287 34.0793ZM48.6738 43.9187C48.6738 45.8829 47.3205 48.4779 45.7186 49.5853L39.6019 53.8151L33.4852 49.5853C32.6078 48.9787 31.777 47.915 31.2054 46.6666C30.7699 45.7153 30.53 44.7394 30.53 43.9191V35.0895L39.6009 30.5845L48.6733 35.1027L48.6738 43.9187Z" fill="#99A3AD"></path>
+                                  <path d="M35.9457 41.4619C35.8196 41.3385 35.6505 41.2707 35.4754 41.2734C35.3002 41.2761 35.1332 41.349 35.0109 41.4763C34.8885 41.6036 34.8208 41.7749 34.8225 41.9527C34.8242 42.1305 34.8952 42.3004 35.0199 42.4253L37.9605 45.3362C38.0844 45.4587 38.2505 45.5274 38.4234 45.5274C38.5964 45.5274 38.7625 45.4587 38.8863 45.3362L44.1839 40.0917C44.3086 39.9668 44.3796 39.7969 44.3813 39.6191C44.383 39.4413 44.3153 39.27 44.193 39.1427C44.0706 39.0154 43.9036 38.9425 43.7285 38.9398C43.5533 38.9371 43.3842 39.0049 43.2581 39.1284L38.4239 43.9146L35.9457 41.4619Z" fill="#99A3AD"></path>
+                                </svg>
+                              </div>
+                              <div class="inclusion-detail">
+                                <div class="inclusion-descruption">
+                                  Dolor elit voluptate cupidatat in eiusmod. Eiusmod ex eu incididunt etile pariatur dolor mollit reprehenderit magna tempor ex minim velit sunt do.
+                                </div>
+                                <div class="inclusion-list">
+                                  <ul >
+                                    <li class="inclusion-list-item">
+                                      <i class="fa-solid fa-check"></i>
+                                      <span>All breakfast, lunch and dinners</span>
+                                    </li>
+                                    <li class="inclusion-list-item">
+                                      <i class="fa-solid fa-check"></i>
+                                      <span>All fees and taxes</span>
+                                    </li>
+                                    <li class="inclusion-list-item">
+                                      <i class="fa-solid fa-check"></i>
+                                      <span>All neccessary documents and paperwork</span>
+                                    </li>
+                                    <li class="inclusion-list-item">
+                                      <i class="fa-solid fa-check"></i>
+                                      <span> Government registered guide</span>
+                                    </li>
+                                    <li class="inclusion-list-item">
+                                      <i class="fa-solid fa-check"></i>
+                                      <span>First aid box</span>
+                                    </li>
+                                    <li class="inclusion-list-item">
+                                      <i class="fa-solid fa-check"></i>
+                                      <span>Farewell dinner</span>
+                                    </li>
+                                    <li class="inclusion-list-item">
+                                      <i class="fa-solid fa-xmark"></i>
+                                      <span>Alcholic beverages</span>
+                                    </li>
+                                    <li class="inclusion-list-item">
+                                      <i class="fa-solid fa-xmark"></i>
+                                      <span>Country visa fee</span>
+                                    </li>
+                                    <li class="inclusion-list-item">
+                                      <i class="fa-solid fa-xmark"></i>
+                                      <span>Personal expenses</span>
+                                    </li>
+                                    <li class="inclusion-list-item">
+                                      <i class="fa-solid fa-xmark"></i>
+                                      <span>Tipping and donations</span>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="section reviews" id="reviews">
+                              <div class="reviews-icon">
+                                <svg width="51" height="52" viewBox="0 0 51 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M51 26.0569C51 11.9289 39.5833 0.47583 25.5 0.47583C11.4167 0.47583 0 11.9289 0 26.0569C0 40.1849 11.4167 51.6379 25.5 51.6379C29.9108 51.6379 34.1604 50.5124 37.9266 48.4C37.9928 48.4321 38.0883 48.4895 38.2244 48.5807C38.2823 48.6195 38.741 48.9376 38.907 49.0479C39.2393 49.2688 39.5554 49.4601 39.9016 49.6434C42.0271 50.7687 44.7903 51.3004 48.7583 51.0338C49.483 50.9851 49.7938 50.0869 49.2549 49.5983C47.8766 48.3484 46.4596 46.762 45.4972 45.3922C45.0172 44.7088 44.6728 44.1109 44.498 43.6599C44.43 43.4842 44.3928 43.3435 44.383 43.2488C48.6135 38.5755 51 32.502 51 26.0569ZM40.6695 48.1838C40.3757 48.0282 40.1053 47.8646 39.8158 47.6722C39.6669 47.5732 39.2115 47.2574 39.1383 47.2083C38.4835 46.7696 38.0509 46.609 37.4761 46.7944C37.3816 46.8249 37.2904 46.8654 37.2024 46.9152C33.6605 48.9194 29.6586 49.9875 25.5 49.9875C12.3253 49.9875 1.64516 39.2734 1.64516 26.0569C1.64516 12.8403 12.3253 2.12622 25.5 2.12622C38.6747 2.12622 49.3548 12.8403 49.3548 26.0569C49.3548 32.125 47.0956 37.837 43.0914 42.2203C41.9783 43.4387 43.8851 46.5383 46.7284 49.4515C44.0844 49.4414 42.173 48.9798 40.6695 48.1838Z" fill="#99A3AD"></path>
+                                  <path d="M31.9727 35.6478L25.6956 31.2659C25.4132 31.0688 25.0384 31.0688 24.756 31.2659L18.4789 35.6478L20.6934 28.3049C20.793 27.9745 20.6771 27.6169 20.403 27.4084L14.3091 22.7736L21.9548 22.6173C22.2987 22.6103 22.602 22.3892 22.715 22.0632L25.2258 14.8169L27.7366 22.0632C27.8496 22.3892 28.1529 22.6103 28.4969 22.6173L36.1425 22.7736L30.0486 27.4084C29.7745 27.6169 29.6586 27.9745 29.7582 28.3049L31.9727 35.6478ZM25.2258 32.9486L32.9755 38.3584C33.6156 38.8053 34.4585 38.191 34.2327 37.4421L31.4987 28.3766L39.0222 22.6545C39.6437 22.1819 39.3218 21.1879 38.542 21.1719L29.1027 20.979L26.0028 12.0327C25.7467 11.2937 24.7049 11.2937 24.4488 12.0327L21.349 20.979L11.9096 21.1719C11.1299 21.1879 10.8079 22.1819 11.4294 22.6545L18.9529 28.3766L16.219 37.4421C15.9931 38.191 16.836 38.8053 17.4761 38.3584L25.2258 32.9486Z" fill="#99A3AD"></path>
+                                </svg>
+                              </div>
+                              <div class="reviews-card">
+                                <div class="card-header">
+                                  <div class="card-avatar">
+                                    <img class="img-fluid" src="assets/images/detail-page-images/avatar.png" alt="avatar"/>
+                                    <span>emeditor</span>
+                                  </div>
+                                  <div class="card-star">
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                  </div>
+                                </div>
+                                <div class="card-detail">
+                                  <div class="card-detail-title">
+                                    Reviewed 13th, August 2022
+                                  </div>
+                                  <div class="card-comment">
+                                    <p>Dolor elit voluptate cupidatat in eiusmod. Eiusmod ex eu incididunt etile pariatur dolor mollit reprehenderit magna tempor ex minim velit sunt do. Elit voluptate cupidatat in eiusmod. Eiusmod ex eu incididunt etile pariatur dolor mollit reprehenderit magna tempor ex minim velit sunt do.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="section faq" id="faq">
+                              <div class="faq-icon">
+                                <svg width="52" height="54" viewBox="0 0 52 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M47.9971 40.8774C51.3711 35.5059 52.6762 29.0842 51.6677 22.8163C50.6593 16.5484 47.4065 10.8647 42.5192 6.8308C37.6319 2.79691 31.4458 0.689826 25.1205 0.904586C18.7953 1.11935 12.7653 3.6412 8.16107 7.99736C3.55685 12.3535 0.694579 18.2448 0.110868 24.5668C-0.472843 30.8887 1.26209 37.2072 4.99041 42.3376C8.71873 47.468 14.1844 51.0581 20.3627 52.4347C26.541 53.8113 33.0077 52.8799 38.5504 49.8151L49.3317 52.6147C49.6365 52.693 49.9567 52.6867 50.2582 52.5963C50.5596 52.506 50.8309 52.3351 51.0428 52.1019C51.2548 51.8687 51.3995 51.582 51.4614 51.2726C51.5234 50.9632 51.5002 50.6427 51.3944 50.3455L47.9971 40.8774ZM38.6544 48.0328C38.4348 47.9753 38.2014 48.0065 38.0044 48.1198C32.8405 51.0625 26.7801 52.0034 20.971 50.7642C15.162 49.525 10.0076 46.1917 6.48404 41.3957C2.96052 36.5996 1.31253 30.6739 1.85219 24.7406C2.39186 18.8074 5.08169 13.2787 9.41227 9.2016C13.7429 5.12451 19.4135 2.78212 25.3502 2.61806C31.2869 2.454 37.0775 4.47967 41.6252 8.31141C46.173 12.1432 49.1622 17.5149 50.0266 23.4094C50.891 29.3038 49.5707 35.3116 46.3158 40.2949C46.2423 40.4065 46.1955 40.5336 46.1789 40.6663C46.1624 40.799 46.1766 40.9337 46.2204 41.06L49.7651 50.9367L38.6544 48.0328Z" fill="#99A3AD"></path>
+                                  <path d="M25.5503 34.2444C24.8943 34.2199 24.2553 34.4575 23.7737 34.9051C23.5472 35.1221 23.3685 35.3843 23.2491 35.6748C23.1297 35.9652 23.0722 36.2775 23.0803 36.5916C23.0679 36.9042 23.1226 37.2158 23.2407 37.5053C23.3589 37.7947 23.5377 38.0554 23.765 38.2695C24.267 38.6903 24.9004 38.9209 25.5547 38.9209C26.2089 38.9209 26.8423 38.6903 27.3443 38.2695C27.5665 38.0555 27.7415 37.7972 27.858 37.5112C27.9744 37.2252 28.0297 36.9178 28.0203 36.609C28.0285 36.2949 27.971 35.9826 27.8516 35.6922C27.7322 35.4017 27.5535 35.1395 27.327 34.9225C27.0905 34.697 26.8116 34.5209 26.5066 34.4045C26.2016 34.288 25.8765 34.2336 25.5503 34.2444Z" fill="#99A3AD"></path>
+                                  <path d="M30.872 17.7334C29.4476 16.6114 27.6615 16.0543 25.854 16.1684C24.0226 16.0615 22.2183 16.6514 20.8014 17.8203C20.1747 18.3996 19.6812 19.1086 19.355 19.8983C19.0287 20.688 18.8776 21.5394 18.912 22.3935H23.332C23.3148 21.6853 23.5692 20.9976 24.0427 20.4721C24.2777 20.2352 24.5595 20.0502 24.8699 19.929C25.1803 19.8077 25.5126 19.7528 25.8453 19.7678C27.4313 19.7678 28.2287 20.6373 28.2287 22.3761C28.2256 22.9526 28.0668 23.5174 27.7693 24.0106C27.2536 24.7605 26.6351 25.4336 25.932 26.0103C25.117 26.6886 24.4678 27.5451 24.034 28.5142C23.6467 29.6069 23.4702 30.7635 23.514 31.9224H27.414L27.4747 30.9921C27.5919 29.9917 28.0623 29.0664 28.8007 28.3838L30.04 27.2014C30.854 26.4594 31.5393 25.5867 32.068 24.6192C32.4542 23.8572 32.6533 23.0136 32.6487 22.1587C32.6975 21.3352 32.5635 20.511 32.2562 19.7457C31.949 18.9804 31.4762 18.2931 30.872 17.7334V17.7334Z" fill="#99A3AD"></path>
+                                </svg>
+                              </div>
+                              <div class="faq-detail">
+                                <div class="accordion" id="accordionExample">
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <span class="quwstion-mark">?</span>
+                                        Whats the best season to go on this activity?
+                                      </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                     No other company offers full-service VIP resort access.We only offer the top branded resort in the conutry to ensoure an unsurpassed experience Resort Style us the only way to travel!
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <span class="quwstion-mark">?</span>
+                                        Are there pickups available from Airport?
+                                      </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                        No other company offers full-service VIP resort access.We only offer the top branded resort in the conutry to ensoure an unsurpassed experience Resort Style us the only way to travel!
+                                         </div>
+                                    </div>
+                                  </div>
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <span class="quwstion-mark">?</span>
+                                        Do I have options of room type?
+                                      </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                        No other company offers full-service VIP resort access.We only offer the top branded resort in the conutry to ensoure an unsurpassed experience Resort Style us the only way to travel!
+                                         </div>
+                                    </div>
+                                  </div>
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapseThree">
+                                        <span class="quwstion-mark">?</span>
+                                        Will you provide medical help if neede?							
+                                      </button>
+                                    </h2>
+                                    <div id="collapsefour" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                        No other company offers full-service VIP resort access.We only offer the top branded resort in the conutry to ensoure an unsurpassed experience Resort Style us the only way to travel!
+                                         </div>
+                                    </div>
+                                  </div>
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapseThree">
+                                        <span class="quwstion-mark">?</span>
+                                        Will you provide medical help if neede?	
+                                      </button>
+                                    </h2>
+                                    <div id="collapsefive" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                        No other company offers full-service VIP resort access.We only offer the top branded resort in the conutry to ensoure an unsurpassed experience Resort Style us the only way to travel!
+                                         </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="section essential-info" id="essential-info">
+                              <div class="essential-info-icon">
+                                <svg width="52" height="50" viewBox="0 0 52 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M24.5508 32.3865C23.8947 32.362 23.2558 32.5996 22.7742 33.0472C22.5477 33.2642 22.369 33.5264 22.2496 33.8169C22.1302 34.1073 22.0727 34.4196 22.0808 34.7337C22.0684 35.0463 22.1231 35.3579 22.2412 35.6473C22.3594 35.9368 22.5382 36.1975 22.7655 36.4116C23.2675 36.8324 23.9009 37.063 24.5552 37.063C25.2094 37.063 25.8428 36.8324 26.3448 36.4116C26.567 36.1976 26.742 35.9393 26.8585 35.6533C26.9749 35.3673 27.0302 35.0599 27.0208 34.7511C27.029 34.437 26.9715 34.1247 26.8521 33.8343C26.7327 33.5438 26.554 33.2816 26.3275 33.0646C26.091 32.839 25.8121 32.663 25.5071 32.5465C25.202 32.4301 24.877 32.3757 24.5508 32.3865V32.3865Z" fill="#99A3AD"></path>
+                                  <path d="M51.3419 38.5584C47.9068 37.2669 44.472 35.9749 41.037 34.683L32.2514 31.3788L38.1449 21.9002C40.9267 17.4264 41.0595 12.0064 38.5004 7.40169C35.9411 2.79705 31.2681 0.0478516 26 0.0478516C20.7319 0.0478516 16.0589 2.79695 13.4997 7.40169C10.9406 12.0064 11.0734 17.4264 13.8552 21.9002L19.7487 31.3788L13.2446 33.8249C9.06496 35.397 4.82838 36.9904 0.658227 38.5584C0.262234 38.7074 0 39.086 0 39.509C0 39.9321 0.262133 40.3108 0.658023 40.4597L25.6424 49.8562C25.7577 49.8996 25.8788 49.9212 25.9999 49.9212C26.121 49.9212 26.2422 49.8996 26.3575 49.8562L37.7248 45.5811C38.2498 45.3836 38.5152 44.7979 38.3179 44.2729C38.1204 43.748 37.5349 43.4821 37.0097 43.6798L26 47.8206L3.90091 39.5092C7.24831 38.2504 10.622 36.9816 13.9597 35.7263L20.8424 33.1377L25.1375 40.0456C25.3229 40.3437 25.649 40.525 26 40.525C26.351 40.525 26.6771 40.3437 26.8625 40.0456L31.1576 33.1377L40.3218 36.5843C42.9141 37.5593 45.5066 38.5344 48.099 39.5092L44.9922 40.6777C44.4672 40.8752 44.2017 41.4609 44.3991 41.9859C44.5523 42.3931 44.939 42.6443 45.3499 42.6443C45.4686 42.6443 45.5895 42.6233 45.7072 42.579L51.3419 40.4598C51.7378 40.3109 51.9999 39.9322 51.9999 39.5091C52 39.086 51.7378 38.7074 51.3419 38.5584V38.5584ZM26 37.5859L15.5801 20.8277C13.1935 16.9894 13.0795 12.3391 15.2751 8.38847C17.4708 4.43779 21.4801 2.0791 26 2.0791C30.5199 2.0791 34.5291 4.43779 36.7249 8.38847C38.9205 12.3391 38.8065 16.9894 36.4199 20.8277L26 37.5859Z" fill="#667085"></path>
+                                  <path d="M41.3613 44.144C41.9222 44.144 42.377 43.6893 42.377 43.1284C42.377 42.5675 41.9222 42.1128 41.3613 42.1128C40.8004 42.1128 40.3457 42.5675 40.3457 43.1284C40.3457 43.6893 40.8004 44.144 41.3613 44.144Z" fill="#667085"></path>
+                                  <path d="M26 6.70117C21.7714 6.70117 18.3311 10.1415 18.3311 14.3701C18.3311 18.5987 21.7714 22.039 26 22.039C30.2287 22.039 33.669 18.5987 33.669 14.3701C33.669 10.1414 30.2287 6.70117 26 6.70117ZM26 20.0078C22.8914 20.0078 20.3623 17.4788 20.3623 14.3701C20.3623 14.091 20.3834 13.8167 20.4228 13.5483C22.2815 13.5501 24.1034 13.8728 25.8489 14.5113C27.6634 15.1752 29.3071 16.148 30.746 17.4071C29.7426 18.9696 27.9909 20.0078 26 20.0078ZM31.5379 15.4212C30.0449 14.2174 28.3724 13.2717 26.5469 12.6038C24.7988 11.9642 22.9831 11.6063 21.1315 11.5324C22.1105 9.85936 23.9255 8.73242 25.9999 8.73242C29.1086 8.73242 31.6377 11.2614 31.6377 14.3701C31.6378 14.7294 31.6025 15.0805 31.5379 15.4212V15.4212Z" fill="#667085"></path>
+                                  </svg>
+                              </div>
+                              <div class="essential-info-detail">
+                                <div class="country-info">
+                                  <div class="country-title">Country Information</div>
+                                  <div class="country-descruption">
+                                    <p>You can create as many Essential Information Blocks in the backend as you need, per country or however it suits your needs.</p>
+                                    <p>And then you can assign individual products that you create with the relevant Essential blocks.</p>
+                                  </div>
+                                </div>
+                                <div class="notes">
+                                  <div class="notes-title">Things to note:</div>
+                                  <div class="notes-descruption">
+                                    <p>
+                                      Dolor elit voluptate cupidatat in eiusmod. Eiusmod ex eu incididunt etile pariatur dolor mollit reprehenderit magna tempor ex minim velit sunt do.
+                                    </p>
+                                  </div>
+                                </div>
+                                <div class="emergency">
+                                  <div class="emergency-title">For Emergencies</div>
+                                  <div class="emergency-content">
+                                    <div class="contact">
+                                    <span class="emergency-contact-detail">Call Emprise Support:</span>
+                                    <span class="emergency-contact-number">+977 9851108896</span>
+                                    </div>
+                                    <div class="contact">
+                                      <span class="emergency-contact-detail">Czechoslovakia Police:</span>
+                                      <span class="emergency-contact-number">+977 9851108896</span>
+                                      </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                      
+                        <div class="col-lg-4">
+                          <aside>
+                            <div class="booking-form">
+                              <div class="booking-form-wraper">
+                                <div class="booking-form-card">
+                                  <div class="booking-card-price">
+                                    <div class="cut-price"><del>€1950</del></div>
+                                  </div>
+                                  <div class="form-price-discount">
+                                    <div class="form-price">
+                                      <span class="price">€1460</span>
+                                      <span class="per-person">per person</span>
+                                    </div>
+                                    <div class="discount">25% OFF</div>
+                                  </div>
+                                  <span>*Price based on selections
+                                    bellow.</span>
+                                </div>
+                                <div class="filter-calender p-0">
+                                  <div class="calender-label side-bar-heading ">
+                                          Date</div>			
+                                      <div class="calender-form">
+                                        <input type="text" class="flatpickr" placeholder="Select Preferred date">
+                                        <i class="bi bi-calendar3"></i>
+                                      </div>
+                                </div>
+                                <div class="travel-number">
+                                  <div class="travel-title">Travellers</div>
+                                  <input type='text' placeholder="Number Of Travellers" list='listid'>
+                                  <span class="number-select">0</span>
+                                  <datalist id='listid'>
+                                    <option  value='Adult (18+)'>
+                                    <option value='Travellers'>
+                              
+                                 </datalist>
+       
+                                </div>
+                                <div class="selection">
+                                  <div class="selection-title">Selection</div>
+                                  <input type='text' placeholder="Flite,Hotal,Car" list='listed'>
+                                  <span class="number-select">0</span>
+                                  <datalist id='listed'>
+                                    <option  value='Double Room (€90)'>
+                                    <option value='Water Bottle (€60)'>
+                                    <option value='Duffle Bag (€70)'>
+                                 </datalist>
+                                </div>
+                                <div class="button btn">
+                                  <a class="button-link" href="#">Check Availability</a>
+                                </div>
+                              </div>
+                            </div>
+                          </aside>
+                        </div>
+                    </div></div>
+
+                </div>
+            </div>
+        </section>
+        <section class="related-product">
+          <div class="container">
+            <div class="related-wraper">
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="list-related-product">
+                    <div class="list-related-product-title">Related Products</div>
+                    <div class="list-related-product-discruption">Sost Brilliant reasons Entrada should be your one-stop-shop!</div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="related-product-button">
+                    <a class="related-product-button-link btn" href="#">Check All</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+       
+    </main>
+    <footer>
+      <section class="footer-main">
+        <div class="container">
+          <div class="footer-main-wraper">
+            <dov class="row">
+              <div class="col-lg-3">
+                <div class="contact">
+                  <div class="footer-logo">
+                    <img class="img-fluid" src="assets/images/tzort-logo-white.png" alt="logo"/>
+                  </div>
+                  <div class="contact-content">
+                    <div class="contact-address">
+                      <span>201W.Big Beaver Road,</span>
+                      <span>Suit 500,Tray,M148084</span>
+                    </div>
+                    <div class="contact-mail">
+                      <a href="mailto:E-Mail: support@tzort.com">support@tzort.com</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-9">
+                <div class="row">
+                  <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer-column">
+                      <div class="footer-heading">Traveling</div>
+                      <ul class="footer-nav">
+                        <li class="footer-nav-list">
+                          <a class="footer-nav-link" href="#">Destination</a>
+                        </li>
+                        <li class="footer-nav-list">
+                          <a class="footer-nav-link" href="#">Resort</a>
+                        </li>
+                        <li class="footer-nav-list">
+                          <a class="footer-nav-link" href="#">Getaways</a>
+                        </li>
+                        <li class="footer-nav-list">
+                          <a class="footer-nav-link" href="#">Events</a>
+                        </li>
+                        <li class="footer-nav-list">
+                          <a class="footer-nav-link" href="#">Traverl Jourrny</a>
+                        </li>
+                        <li class="footer-nav-list">
+                          <a class="footer-nav-link" href="#">Trust & Safe</a>
+                        </li>
+                        <li class="footer-nav-list">
+                          <a class="footer-nav-link" href="#">Value</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer-column">
+                      <div class="footer-heading">Interest</div>
+                      <ul class="footer-nav">
+                        <li class="footer-nav-list">
+                          <a class="footer-nav-link" href="#">Advanture Travel</a>
+                        </li>
+                        <li class="footer-nav-list">
+                          <a class="footer-nav-link" href="#">Art and Culture</a>
+                        </li>
+                        <li class="footer-nav-list">
+                          <a class="footer-nav-link" href="#">Beaches,and Islands</a>
+                        </li>
+                        <li class="footer-nav-list">
+                          <a class="footer-nav-link" href="#">Festivals</a>
+                        </li>
+                        <li class="footer-nav-list">
+                          <a class="footer-nav-link" href="#">Food and Drink</a>
+                        </li>
+                        <li class="footer-nav-list">
+                          <a class="footer-nav-link" href="#">Honeymoon</a>
+                        </li>
+                        <li class="footer-nav-list">
+                          <a class="footer-nav-link" href="#">Road Trips</a>
+                        </li>
+                        <li class="footer-nav-list">
+                          <a class="footer-nav-link" href="#">Sustainable Travel</a>
+                        </li>
+                        <li class="footer-nav-list">
+                          <a class="footer-nav-link" href="#">Travel Gear and Touch</a>
+                        </li>
+                        <li class="footer-nav-list">
+                          <a class="footer-nav-link" href="#">Travel on Budget</a>
+                        </li>
+                        <li class="footer-nav-list">
+                          <a class="footer-nav-link" href="#">Wildlife and Nature</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer-column">
+                      <div class="footer-heading">Company</div>
+                      <ul class="footer-nav">
+                        <li class="footer-nav-list">
+                          <a class="footer-nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="footer-nav-list">
+                          <a class="footer-nav-link" href="#">Team</a>
+                        </li>
+                        <li class="footer-nav-list">
+                          <a class="footer-nav-link" href="#">Careers</a>
+                        </li>
+                        <li class="footer-nav-list">
+                          <a class="footer-nav-link" href="#">Business</a>
+                        </li>
+                        <li class="footer-nav-list">
+                          <a class="footer-nav-link" href="#">Press</a>
+                        </li>
+                        <li class="footer-nav-list">
+                          <a class="footer-nav-link" href="#">Contact</a>
+                        </li>
+                        
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer-column">
+                      <div class="footer-heading">Social</div>
+                      <ul class="footer-nav">
+                        <li class="footer-nav-list">
+                          <a class="footer-nav-link" href="#"><i class="fa-brands fa-facebook"></i>Facebook</a>
+                        </li>
+                        <li class="footer-nav-list">
+                          <a class="footer-nav-link" href="#"><i class="fa-brands fa-instagram"></i>Instagram</a>
+                        </li>
+                        <li class="footer-nav-list">
+                          <a class="footer-nav-link" href="#"><i class="fa-brands fa-twitter"></i>Twitter</a>
+                        </li>
+                        <li class="footer-nav-list">
+                          <a class="footer-nav-link" href="#"><i class="fa-brands fa-linkedin"></i>Linked In</a>
+                        </li>
+                        
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dov>
+          </div>
+        </div>
+      </section>
+      <section class="footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="footer-bottom-topbar">
+                <span class="detail">Tzort is not affiliated any resort brand.It represent individual timeshare
+                  owner to connect them directly with guests.
+                </span>
+                <span class="language">English(US)</span>
+              </div>
+              <div class="footer-bottom-copyright">
+                <span>Copyright©2022 TZort resort.All right reserved.No part of this site may be reproduced with our written permission.</span>
+                <span>
+                  <ul>
+                    <li>
+                      <a class="footer-bottom-link" href="#">Cookie</a>
+                    </li>
+                    <li>
+                      <a class="footer-bottom-link" href="#">privacy</a>
+                    </li>
+                    <li>
+                      <a class="footer-bottom-link" href="#">Legal Information</a>
+                    </li>
+                  </ul>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous"></script>
+<script>
+
+
+
+ /* 
+  jQuery(document).ready(function() {
+    var sync1 = jQuery("#sync1");
+    var sync2 = jQuery("#sync2");
+    var slidesPerPage = 5; //globaly define number of elements per page
+    var syncedSecondary = true;
+
+    sync1
+      .owlCarousel({
+      items: 2,
+      slideSpeed: 3000,
+      nav: true,
+
+      //   animateOut: 'fadeOut',
+      
+      autoplayHoverPause: true,
+      autoplaySpeed: 1400, //過場速度
+      dots: false,
+      loop: true,
+      responsiveClass: true,
+      
+      responsive: {
+        0: {
+          item: 1,
+          autoplay: false
+        },
+        600: {
+          items: 1,
+          autoplay: true
+        }
+      },
+      responsiveRefreshRate: 200,
+      navText: [
+        '<svg width="100%" height="100%" viewBox="0 0 11 20"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M9.554,1.001l-8.607,8.607l8.607,8.606"/></svg>',
+        '<svg width="100%" height="100%" viewBox="0 0 11 20" version="1.1"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M1.054,18.214l8.606,-8.606l-8.606,-8.607"/></svg>'
+      ]
+    })
+      .on("changed.owl.carousel", syncPosition);
+
+    sync2
+      .on("initialized.owl.carousel", function() {
+      sync2
+        .find(".owl-item")
+        .eq(0)
+        .addClass("current");
+    })
+      .owlCarousel({
+      items: slidesPerPage,
+      dots: false,
+      nav:true,
+      //   nav: true,
+      smartSpeed: 1000,
+      slideSpeed: 1000,
+      animateOut: 'slideOutUp',
+      animateIn: 'slideInUp',
+      animateOut: 'fadeOut', // Choose your animation type
+      animateIn: 'fadeIn',
+      slideBy: slidesPerPage, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
+      responsiveRefreshRate: 100
+    })
+      .on("changed.owl.carousel", syncPosition2);
+
+    function syncPosition(el) {
+      //if you set loop to false, you have to restore this next line
+      //var current = el.item.index;
+
+      //if you disable loop you have to comment this block
+      var count = el.item.count - 1;
+      var current = Math.round(el.item.index - el.item.count / 2 - 0.5);
+
+      if (current < 0) {
+        current = count;
+      }
+      if (current > count) {
+        current = 0;
+      }
+
+      //end block
+
+      sync2
+        .find(".owl-item")
+        .removeClass("current")
+        .eq(current)
+        .addClass("current");
+      var onscreen = sync2.find(".owl-item.active").length - 1;
+      var start = sync2
+      .find(".owl-item.active")
+      .first()
+      .index();
+      var end = sync2
+      .find(".owl-item.active")
+      .last()
+      .index();
+
+      if (current > end) {
+        sync2.data("owl.carousel").to(current, 100, true);
+      }
+      if (current < start) {
+        sync2.data("owl.carousel").to(current - onscreen, 100, true);
+      }
+    }
+
+    function syncPosition2(el) {
+      if (syncedSecondary) {
+        var number = el.item.index;
+        sync1.data("owl.carousel").to(number, 100, true);
+      }
+    }
+
+    sync2.on("click", ".owl-item", function(e) {
+      e.preventDefault();
+      var number = jQuery(this).index();
+      sync1.data("owl.carousel").to(number, 300, true);
+    });
+  });
+*/
+  
+  $(window).scroll(function(){
+    if ($(this).scrollTop() > 815) {
+        $('.sub-menu').addClass('fixed');
+    } else {
+        $('.sub-menu').removeClass('fixed');
+    }
+});
+
+
+
+
+
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.0/jquery.flexslider-min.js"></script>
+<script src="scroler.js"></script>
+<script src="assets/js/detail-slider.js"></script>
+</body>
+</html>

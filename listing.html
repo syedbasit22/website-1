@@ -1,0 +1,1267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--CSS-->
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--oll carousel-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" />
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" />
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <!---->
+    <link rel="stylesheet" href="assets/flatpicker/flatpicker.css">
+    <script src="assets/flatpicker/flatpicker.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.0/nouislider.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.3/l10n/id.js"></script>
+                                 
+    
+    <!---->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/apple-touch-icon.ico">
+    <title>Listing</title>
+
+  </head>
+  <body>
+    <header>
+        <section class="navigation">
+            <div class="container">
+                <div class="navigation-wraper">
+                    <div class="row">
+                      <div class="col-lg-6 col-md-4 col">
+                        <div class="logo-wraper">
+                          <a class="logo" href="Home.html"><img class="img-fluid" src="assets/images/TZORT-blue-small.png" alt="logo" width="128" height="70"/> </a>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-8 col">
+                        <div class="nav-top">
+                            <div class="navigation-top-link">
+                                <ul>
+                                    <li><a href="listing.html" class="top-link">Hot deals</a></li>
+                                    <li><a href="#" class="top-link">Resort</a></li>
+                                    <li><a href="#" class="top-link">About</a></li>
+                                </ul>
+                            </div>
+                        <div class="navigation-toggle">
+                        <a class="btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                            <i class="fa-solid fa-bars"></i> 
+                          </a>
+                          <div class="user-icon"><i class="fa-solid fa-user"></i></div>
+                        
+                          
+                          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                            <div class="offcanvas-header">
+                              <h5 class="offcanvas-title" id="offcanvasExampleLabel">Tzort</h5>
+                              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                               
+                                  <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-truncate">
+                                            <i class="fs-5 bi-house"></i><span class="ms-1   d-sm-inline">Home</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#submenu1" data-bs-toggle="collapse" class="nav-link text-truncate">
+                                          <i class=" fs-5 bi bi-file-earmark-person"></i><span class="ms-1   d-sm-inline">About</span> </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-truncate">
+                                            <i class="fs-5 bi bi-person-lines-fill"></i><span class="ms-1   d-sm-inline">Contact</span></a>
+                                    </li>
+                                    <li class="dropdown nav-item">
+                                        <a href="#" class="nav-link dropdown-toggle  text-truncate" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fs-5  bi-collection"></i><span class="ms-1   d-sm-inline">Community</span>
+                                        </a>
+                                        <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdown">
+                                            <li><a class="dropdown-item" href="#">New project...</a></li>
+                                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-truncate">
+                                            <i class="fs-5 bi-book"></i><span class="ms-1   d-sm-inline">LearningCenter</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-truncate">
+                                            <i class="fs-5 bi-people-fill"></i><span class="ms-1   d-sm-inline">Testimonials</span> </a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a href="#" class="nav-link text-truncate">
+                                          <i class="fs-5 bi-quote"></i><span class="ms-1   d-sm-inline">Blogs</span> </a>
+                                  </li>
+                                </ul>
+                                </div>
+                          </div>
+                          </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="listing-header">
+            <div class="container">
+                <div class="listing-header-wraper">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="show-result">
+                            <span>Showing 1 - 9 of 23 results </span>
+                        </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="sort-button">
+                            <span>Sort by:</span>
+                            <div class="sort-list-button">
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Most recently added
+                                        <i class="fa-solid fa-angle-down"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-item" href="#">Price (Low to High)</a></li>
+                                      <li><a class="dropdown-item" href="#">Price (High to Low)</a></li>
+                                      <li><a class="dropdown-item" href="#">Duration (Short to Long)</a></li>
+                                      <li><a class="dropdown-item" href="#">Duration (Long to Short)</a></li>
+                                      <li><a class="dropdown-item" href="#">Highest Rated</a></li>
+                                    </ul>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="listing-categories">
+            <div class="container">
+                <div class="categories-wraper">
+                    <div class="owl-carousel owl-theme listing-slider">
+                        <div class="item">
+                            <div class="list-categorie">
+                                <div class="categorie-icon"><i class="fa-solid fa-minus text-white"></i></div>
+                                <div class="categorie-title">Covid Free Zone</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="list-categorie">
+                                <div class="categorie-icon"><i class="fa-solid fa-cake-candles  bg-white"></i></div>
+                                <div class="categorie-title">Fantasy Flavors</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="list-categorie">
+                                <div class="categorie-icon"><i class="fa-regular fa-heart bg-white bg-white"></i></div>
+                                <div class="categorie-title">Honeymoon Specials</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="list-categorie">
+                                <div class="categorie-icon"><i class="fa-solid fa-helicopter bg-white"></i></div>
+                                <div class="categorie-title">Luxury Tours</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="list-categorie">
+                                <div class="categorie-icon"><i class="fa-solid fa-badge-dollar"></i></div>
+                                <div class="categorie-title">Discounted Deals</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="list-categorie">
+                                <div class="categorie-icon"><i class="fa-brands fa-fonticons-fi bg-white"></i></div>
+                                <div class="categorie-title">Emprise Specials</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="list-categorie">
+                                <div class="categorie-icon"><i class="fa-solid fa-globe bg-white"></i></div>
+                                <div class="categorie-title">Away from Chaos</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="list-categorie">
+                                <div class="categorie-icon"><i class="fa-solid fa-wave-pulse"></i></div>
+                                <div class="categorie-title">Epic Challenges</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="list-categorie">
+                                <div class="categorie-icon"><i class="fa-solid fa-minus text-white"></i></div>
+                                <div class="categorie-title">Covid Free Zone</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="products">
+            <div class="container">
+                <div class="products-wraper">
+                    <div class="row listing-row">
+                        <div class="col-lg-3">
+                            <div class="side-bar">
+                                <div class="filter-calender side-bar-space p-0">
+                                    <div class="calender-label side-bar-heading ">
+                                            When are you travelling?</div>			
+                                        <div class="calender-form">
+                                          <input type="text" class="flatpickr">
+                                          <i class="bi bi-calendar3"></i>
+                                        </div>
+                                    
+                                </div>
+                                <div class="popular-tags side-bar-space">
+                                    <div class="popular-heading side-bar-heading">Popular Tags</div>
+                                    <ul class="checkboxs">
+                                        <li class="checkbox-item">
+                                            <input class="checkbox"  type="checkbox"/>
+                                            <label for="checkbox" class="checkbox-text">Audio guide</label>
+                                        </li>
+                                        <li class="checkbox-item">
+                                            <input type="checkbox"/>
+                                            <label class="checkbox-text">Free canccellation</label>
+                                        </li>
+                                        <li class="checkbox-item">
+                                            <input type="checkbox"/>
+                                            <label class="checkbox-text">Pickup</label>
+                                        </li>
+                                        <li class="checkbox-item">
+                                            <input type="checkbox"/>
+                                            <label class="checkbox-text">Privat group</label>
+                                        </li>
+                                        <li class="checkbox-item">
+                                            <input type="checkbox"/>
+                                            <label class="checkbox-text">Skip the line</label>
+                                        </li>
+                                        <li class="checkbox-item">
+                                            <input type="checkbox"/>
+                                            <label class="checkbox-text">Small group</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="range side-bar-space">
+                                    <div class="range-heading side-bar-heading">Price Range</div>
+                                    <!--<div class="wrapper">
+                                      <div class="values">
+                                          <span class="range-value" id="range1">
+                                              0
+                                          </span>
+                                          
+                                          <span class="range-value" id="range2">
+                                              100
+                                          </span>
+                                      </div>
+                                      <div class="conta">
+                                          <div class="slider-track"></div>
+                                          <input class="range-line" type="range" min="0" max="100" value="30" id="slider-1" oninput="slideOne()">
+                                          <input class="range-line1" type="range" min="0" max="100" value="70" id="slider-2" oninput="slideTwo()">
+                                      </div>
+                                  </div>-->
+
+                      
+                                  <div class="wrapper">
+                                     <div class="values"> 
+                                      <button id="lowButton" class="btn range-value">0</button>
+                                      <button id="highButton" class="btn range-value">100</button>
+                                    </div>
+                                      <div id="slider"></div>
+                                  
+                                   </div>
+                                 
+                                  
+
+
+                                </div>
+                                <div class=" duration popular-tags side-bar-space">
+                                    <div class=" duration-hrading side-bar-heading">Duration</div>
+                                    <ul class="checkboxs">
+                                        
+                                        <li class="checkbox-item">
+                                            <input type="checkbox"/>
+                                            <label class="checkbox-text">Day Tour</label>
+                                        </li>
+                                        <li class="checkbox-item">
+                                            <input type="checkbox"/>
+                                            <label class="checkbox-text">Short Break</label>
+                                        </li>
+                                        <li class="checkbox-item">
+                                            <input type="checkbox"/>
+                                            <label class="checkbox-text">Vacation</label>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="rating popular-tags side-bar-space">
+                                    <div class="rating- heading side-bar-heading">Tour Rating</div>
+                                    <ul class="checkboxs">
+                                        <li class="checkbox-item">
+                                            <input type="checkbox"/>
+                                            <span class="rating-star">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </span>
+                                        </li>
+                                        <li class="checkbox-item">
+                                            <input type="checkbox"/>
+                                            <span class="rating-star">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                            </span>
+                                        </li>
+                                        <li class="checkbox-item">
+                                            <input type="checkbox"/>
+                                            <span class="rating-star">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                            </span>
+                                        </li>
+                                        <li class="checkbox-item">
+                                            <input type="checkbox"/>
+                                            <span class="rating-star">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                            </span>
+                                        </li>
+                                        <li class="checkbox-item">
+                                            <input type="checkbox"/>
+                                            <span class="rating-star">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                            </span>
+                                        </li>
+                                       
+                                    </ul>
+                                </div>
+                                <div class="age-group popular-tags side-bar-space">
+                                    <div class="age-group-heading side-bar-heading">Age Group</div>
+                                    <ul class="checkboxs">
+                                        <li class="checkbox-item">
+                                            <input type="checkbox"/>
+                                           <label class="checkbox-text">Adult (18+)</label>
+                                        </li>
+                                        <li class="checkbox-item">
+                                            <input type="checkbox"/>
+                                           <label class="checkbox-text">Child (7-17)</label>
+                                        </li>
+                                        <li class="checkbox-item">
+                                            <input type="checkbox"/>
+                                           <label class="checkbox-text">Infant (0-7)</label>
+                                        </li>
+                                        <li class="checkbox-item">
+                                            <input type="checkbox"/>
+                                           <label class="checkbox-text">Senior Citizens (65+)</label>
+                                        </li>
+                                       
+                                       
+                                    </ul>
+                                </div>
+                                <div class="hardship popular-tags side-bar-space">
+                                    <div class="hardship-heading side-bar-heading">Product Hardship</div>
+                                    <ul class="checkboxs">
+                                        <li class="checkbox-item">
+                                            <input type="checkbox"/>
+                                           <label class="checkbox-text">Leisurely</label>
+                                        </li>
+                                        <li class="checkbox-item">
+                                            <input type="checkbox"/>
+                                           <label class="checkbox-text">Moderate</label>
+                                        </li>
+                                        <li class="checkbox-item">
+                                            <input type="checkbox"/>
+                                           <label class="checkbox-text">Challenging</label>
+                                        </li>
+                                        <li class="checkbox-item">
+                                            <input type="checkbox"/>
+                                           <label class="checkbox-text">Strenous</label>
+                                        </li>
+                                        <li class="checkbox-item">
+                                            <input type="checkbox"/>
+                                           <label class="checkbox-text">Multi-Level</label>
+                                        </li>
+                                       
+                                       
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                          <div class="list-product">
+                          <div class="row">
+                            <div class="col-xl-4 col-lg-6 col-md-6">
+                                <div class="listing-card">
+                                    <div class="listing-image-wraper">
+                                      
+                                      <div class="owl-carousel owl-theme listing-card-slider">
+                                        <div class="listing-slider-item">
+                                          <div class="discount-wish">
+                                            <span class="discount card-badge">
+                                              <span class="discount-text d-none">30%</span></span>
+                                            <span class="wishlist"><i class="bi bi-heart-fill"></i></span>
+                                          </div>
+                                          <img class="img-fluid" src="assets/images/listing2.jpg" alt="hotal image" width="auto" height="auto"/>
+                                        </div>
+                                        <div class="listing-slider-item">
+                                          <div class="discount-wish">
+                                            <span class="discount card-badge">
+                                              <span class="discount-text d-none">30%</span></span>
+                                            <span class="wishlist"><i class="bi bi-heart-fill"></i></span>
+                                          </div>
+                                          <img class="img-fluid" src="assets/images/listing2.jpg" alt="hotal image" width="auto" height="auto"/>
+                                        </div>
+                                        <div class="listing-slider-item">
+                                          <div class="discount-wish">
+                                            <span class="discount card-badge">
+                                              <span class="discount-text d-none">30%</span></span>
+                                            <span class="wishlist"><i class="bi bi-heart-fill"></i></span>
+                                          </div>
+                                          <img class="img-fluid" src="assets/images/listing2.jpg" alt="hotal image" width="auto" height="auto"/>
+                                        </div>
+                                      </div>
+                                     
+                                      
+                                    </div>
+                                    <div class="content">
+                                      <div class="card-header">
+                                        <div class="card-title"><a class="card-title-link" href="detail.html">Lagoon Day Trip from Natal</a></div>
+                                        <div class="card-subtitle"><span class="activity link1"><a class="activity-link sublink" href="#">Boating & Sailing </a> </span><span class="city link1"><a class="city-link sublink" href="#">| Natal</a> </span></div>
+                                      </div>
+                                      <div class="card-detail">
+                                        <div class="card-price">
+                                          <div class="group">
+                                            <span class="cut-price d-none"><del>€3,500</del></span>
+                                            Per Group
+                                          </div>
+                                          <div class="price">
+                                            €5,500
+                                          </div>
+                                        </div>
+                                        <div class="card-rating">
+                                          <div class="rating-icon">
+                                            <i class="bi bi-star"></i>
+                                            <i class="bi bi-star"></i>
+                                            <i class="bi bi-star"></i>
+                                            <i class="bi bi-star"></i>
+                                            <i class="bi bi-star"></i>
+                                          </div>
+                                          <span>0.0(1)</span>
+                                        </div>
+                                      </div>
+                                      <div class="card-footer">
+                                        <div class="card-duration">
+                                          <span class="duration-icon"><i class="bi bi-clock"></i></span>
+                                          <span class="duration-days">8 Days</span>
+                                        </div>
+                                        <div class="card-service">
+                                          <ul>
+                                            <li>
+                                              <span class="service-icon"><i class="bi bi-check2"></i></span>
+                                              <span class="service-text">Free cancellation</span>
+                                            </li>
+                                            <li>
+                                              <span class="service-icon"><i class="bi bi-check2"></i></span>
+                                              <span class="service-text">Pickup</span>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-md-6">
+                              <div class="listing-card">
+                                  <div class="listing-image-wraper">
+                                    
+                                    <div class="owl-carousel owl-theme listing-card-slider">
+                                      <div class="listing-slider-item">
+                                        <div class="discount-wish">
+                                          <span class="discount card-badge">
+                                            <span class="discount-text">30%</span></span>
+                                          <span class="wishlist"><i class="bi bi-heart-fill"></i></span>
+                                        </div>
+                                        <img class="img-fluid" src="assets/images/listing1.jpg" alt="hotal image" width="auto" height="auto"/>
+                                      </div>
+                                      <div class="listing-slider-item">
+                                        <div class="discount-wish">
+                                          <span class="discount card-badge">
+                                            <span class="discount-text">30%</span></span>
+                                          <span class="wishlist"><i class="bi bi-heart-fill"></i></span>
+                                        </div>
+                                        <img class="img-fluid" src="assets/images/listing1.jpg" alt="hotal image" width="auto" height="auto"/>
+                                      </div>
+                                      <div class="listing-slider-item">
+                                        <div class="discount-wish">
+                                          <span class="discount card-badge">
+                                            <span class="discount-text">30%</span></span>
+                                          <span class="wishlist"><i class="bi bi-heart-fill"></i></span>
+                                        </div>
+                                        <img class="img-fluid" src="assets/images/listing1.jpg" alt="hotal image" width="auto" height="auto"/>
+                                      </div>
+                                    </div>
+                                   
+                                    
+                                  </div>
+                                  <div class="content">
+                                    <div class="card-header">
+                                      <div class="card-title"><a class="card-title-link" href="detail.html">Lagoon Day Trip from Natal</a></div>
+                                      <div class="card-subtitle"><span class="activity link1"><a class="activity-link sublink" href="#">Boating & Sailing </a> </span><span class="city link1"><a class="city-link sublink" href="#">| Natal</a> </span></div>
+                                    </div>
+                                    <div class="card-detail">
+                                      <div class="card-price">
+                                        <div class="group">
+                                          <span class="cut-price"><del>€7,500</del></span>
+                                          Per Group
+                                        </div>
+                                        <div class="price">
+                                          €5,500
+                                        </div>
+                                      </div>
+                                      <div class="card-rating">
+                                        <div class="rating-icon">
+                                          <i class="bi bi-star"></i>
+                                          <i class="bi bi-star"></i>
+                                          <i class="bi bi-star"></i>
+                                          <i class="bi bi-star"></i>
+                                          <i class="bi bi-star"></i>
+                                        </div>
+                                        <span>0.0(1)</span>
+                                      </div>
+                                    </div>
+                                    <div class="card-footer">
+                                      <div class="card-duration">
+                                        <span class="duration-icon"><i class="bi bi-clock"></i></span>
+                                        <span class="duration-days">8 Days</span>
+                                      </div>
+                                      <div class="card-service">
+                                        <ul>
+                                          <li>
+                                            <span class="service-icon"><i class="bi bi-check2"></i></span>
+                                            <span class="service-text">Free cancellation</span>
+                                          </li>
+                                          <li>
+                                            <span class="service-icon"><i class="bi bi-check2"></i></span>
+                                            <span class="service-text">Pickup</span>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-md-6">
+                            <div class="listing-card">
+                                <div class="listing-image-wraper">
+                                  
+                                  <div class="owl-carousel owl-theme listing-card-slider">
+                                    <div class="listing-slider-item">
+                                      <div class="discount-wish">
+                                        <span class="discount card-badge">
+                                          <span class="discount-text d-none">30%</span></span>
+                                        <span class="wishlist"><i class="bi bi-heart-fill"></i></span>
+                                      </div>
+                                      <img class="img-fluid" src="assets/images/listing2.jpg" alt="hotal image" width="auto" height="auto"/>
+                                    </div>
+                                    <div class="listing-slider-item">
+                                      <div class="discount-wish">
+                                        <span class="discount card-badge">
+                                          <span class="discount-text d-none">30%</span></span>
+                                        <span class="wishlist"><i class="bi bi-heart-fill"></i></span>
+                                      </div>
+                                      <img class="img-fluid" src="assets/images/listing2.jpg" alt="hotal image" width="auto" height="auto"/>
+                                    </div>
+                                    <div class="listing-slider-item">
+                                      <div class="discount-wish">
+                                        <span class="discount card-badge">
+                                          <span class="discount-text d-none">30%</span></span>
+                                        <span class="wishlist"><i class="bi bi-heart-fill"></i></span>
+                                      </div>
+                                      <img class="img-fluid" src="assets/images/listing2.jpg" alt="hotal image" width="auto" height="auto"/>
+                                    </div>
+                                  </div>
+                                 
+                                  
+                                </div>
+                                <div class="content">
+                                  <div class="card-header">
+                                    <div class="card-title"><a class="card-title-link" href="detail.html">Lagoon Day Trip from Natal</a></div>
+                                    <div class="card-subtitle"><span class="activity link1"><a class="activity-link sublink" href="#">Boating & Sailing </a> </span><span class="city link1"><a class="city-link sublink" href="#">| Natal</a> </span></div>
+                                  </div>
+                                  <div class="card-detail">
+                                    <div class="card-price">
+                                      <div class="group">
+                                        <span class="cut-price d-none"><del>€3,500</del></span>
+                                        Per Group
+                                      </div>
+                                      <div class="price">
+                                        €5,500
+                                      </div>
+                                    </div>
+                                    <div class="card-rating">
+                                      <div class="rating-icon">
+                                        <i class="bi bi-star"></i>
+                                        <i class="bi bi-star"></i>
+                                        <i class="bi bi-star"></i>
+                                        <i class="bi bi-star"></i>
+                                        <i class="bi bi-star"></i>
+                                      </div>
+                                      <span>0.0(1)</span>
+                                    </div>
+                                  </div>
+                                  <div class="card-footer">
+                                    <div class="card-duration">
+                                      <span class="duration-icon"><i class="bi bi-clock"></i></span>
+                                      <span class="duration-days">8 Days</span>
+                                    </div>
+                                    <div class="card-service">
+                                      <ul>
+                                        <li>
+                                          <span class="service-icon"><i class="bi bi-check2"></i></span>
+                                          <span class="service-text">Free cancellation</span>
+                                        </li>
+                                        <li>
+                                          <span class="service-icon"><i class="bi bi-check2"></i></span>
+                                          <span class="service-text">Pickup</span>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-md-6">
+                          <div class="listing-card">
+                              <div class="listing-image-wraper">
+                                
+                                <div class="owl-carousel owl-theme listing-card-slider">
+                                  <div class="listing-slider-item">
+                                    <div class="discount-wish">
+                                      <span class="discount card-badge">
+                                        <span class="discount-text">20%</span></span>
+                                      <span class="wishlist"><i class="bi bi-heart-fill"></i></span>
+                                    </div>
+                                    <img class="img-fluid" src="assets/images/listing3.avif" alt="hotal image" width="auto" height="auto"/>
+                                  </div>
+                                  <div class="listing-slider-item">
+                                    <div class="discount-wish">
+                                      <span class="discount card-badge">
+                                        <span class="discount-text">20%</span></span>
+                                      <span class="wishlist"><i class="bi bi-heart-fill"></i></span>
+                                    </div>
+                                    <img class="img-fluid" src="assets/images/listing3.avif" alt="hotal image" width="auto" height="auto"/>
+                                  </div>
+                                  <div class="listing-slider-item">
+                                    <div class="discount-wish">
+                                      <span class="discount card-badge">
+                                        <span class="discount-text">20%</span></span>
+                                      <span class="wishlist"><i class="bi bi-heart-fill"></i></span>
+                                    </div>
+                                    <img class="img-fluid" src="assets/images/listing3.avif" alt="hotal image" width="auto" height="auto"/>
+                                  </div>
+                                </div>
+                               
+                                
+                              </div>
+                              <div class="content">
+                                <div class="card-header">
+                                  <div class="card-title"><a class="card-title-link" href="detail.html">Lagoon Day Trip from Natal</a></div>
+                                  <div class="card-subtitle"><span class="activity link1"><a class="activity-link sublink" href="#">Boating & Sailing </a> </span><span class="city link1"><a class="city-link sublink" href="#">| Natal</a> </span></div>
+                                </div>
+                                <div class="card-detail">
+                                  <div class="card-price">
+                                    <div class="group">
+                                      <span class="cut-price "><del>€6,500</del></span>
+                                      Per Group
+                                    </div>
+                                    <div class="price">
+                                      €5,500
+                                    </div>
+                                  </div>
+                                  <div class="card-rating">
+                                    <div class="rating-icon">
+                                      <i class="bi bi-star"></i>
+                                      <i class="bi bi-star"></i>
+                                      <i class="bi bi-star"></i>
+                                      <i class="bi bi-star"></i>
+                                      <i class="bi bi-star"></i>
+                                    </div>
+                                    <span>0.0(1)</span>
+                                  </div>
+                                </div>
+                                <div class="card-footer">
+                                  <div class="card-duration">
+                                    <span class="duration-icon"><i class="bi bi-clock"></i></span>
+                                    <span class="duration-days">8 Days</span>
+                                  </div>
+                                  <div class="card-service">
+                                    <ul>
+                                      <li>
+                                        <span class="service-icon"><i class="bi bi-check2"></i></span>
+                                        <span class="service-text">Free cancellation</span>
+                                      </li>
+                                      <li>
+                                        <span class="service-icon"><i class="bi bi-check2"></i></span>
+                                        <span class="service-text">Pickup</span>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="listing-card">
+                            <div class="listing-image-wraper">
+                              
+                              <div class="owl-carousel owl-theme listing-card-slider">
+                                <div class="listing-slider-item">
+                                  <div class="discount-wish">
+                                    <span class="discount card-badge">
+                                      <span class="discount-text d-none">30%</span></span>
+                                    <span class="wishlist"><i class="bi bi-heart-fill"></i></span>
+                                  </div>
+                                  <img class="img-fluid" src="assets/images/listing4.avif" alt="hotal image" width="auto" height="auto"/>
+                                </div>
+                                <div class="listing-slider-item">
+                                  <div class="discount-wish">
+                                    <span class="discount card-badge">
+                                      <span class="discount-text d-none">30%</span></span>
+                                    <span class="wishlist"><i class="bi bi-heart-fill"></i></span>
+                                  </div>
+                                  <img class="img-fluid" src="assets/images/listing4.avif" alt="hotal image" width="auto" height="auto"/>
+                                </div>
+                                <div class="listing-slider-item">
+                                  <div class="discount-wish">
+                                    <span class="discount card-badge">
+                                      <span class="discount-text d-none">30%</span></span>
+                                    <span class="wishlist"><i class="bi bi-heart-fill"></i></span>
+                                  </div>
+                                  <img class="img-fluid" src="assets/images/listing4.avif" alt="hotal image" width="auto" height="auto"/>
+                                </div>
+                              </div>
+                             
+                              
+                            </div>
+                            <div class="content">
+                              <div class="card-header">
+                                <div class="card-title"><a class="card-title-link" href="detail.html">Lagoon Day Trip from Natal</a></div>
+                                <div class="card-subtitle"><span class="activity link1"><a class="activity-link sublink" href="#">Boating & Sailing </a> </span><span class="city link1"><a class="city-link sublink" href="#">| Natal</a> </span></div>
+                              </div>
+                              <div class="card-detail">
+                                <div class="card-price">
+                                  <div class="group">
+                                    <span class="cut-price d-none"><del>€3,500</del></span>
+                                    Per Group
+                                  </div>
+                                  <div class="price">
+                                    €5,500
+                                  </div>
+                                </div>
+                                <div class="card-rating">
+                                  <div class="rating-icon">
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                  </div>
+                                  <span>0.0(1)</span>
+                                </div>
+                              </div>
+                              <div class="card-footer">
+                                <div class="card-duration">
+                                  <span class="duration-icon"><i class="bi bi-clock"></i></span>
+                                  <span class="duration-days">8 Days</span>
+                                </div>
+                                <div class="card-service">
+                                  <ul>
+                                    <li>
+                                      <span class="service-icon"><i class="bi bi-check2"></i></span>
+                                      <span class="service-text">Free cancellation</span>
+                                    </li>
+                                    <li>
+                                      <span class="service-icon"><i class="bi bi-check2"></i></span>
+                                      <span class="service-text">Pickup</span>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-md-6">
+                      <div class="listing-card">
+                          <div class="listing-image-wraper">
+                            
+                            <div class="owl-carousel owl-theme listing-card-slider">
+                              <div class="listing-slider-item">
+                                <div class="discount-wish">
+                                  <span class="discount card-badge">
+                                    <span class="discount-text d-none">30%</span></span>
+                                  <span class="wishlist"><i class="bi bi-heart-fill"></i></span>
+                                </div>
+                                <img class="img-fluid" src="assets/images/listing5.avif" alt="hotal image" width="auto" height="auto"/>
+                              </div>
+                              <div class="listing-slider-item">
+                                <div class="discount-wish">
+                                  <span class="discount card-badge">
+                                    <span class="discount-text d-none">30%</span></span>
+                                  <span class="wishlist"><i class="bi bi-heart-fill"></i></span>
+                                </div>
+                                <img class="img-fluid" src="assets/images/listing5.avif" alt="hotal image" width="auto" height="auto"/>
+                              </div>
+                              <div class="listing-slider-item">
+                                <div class="discount-wish">
+                                  <span class="discount card-badge">
+                                    <span class="discount-text d-none">30%</span></span>
+                                  <span class="wishlist"><i class="bi bi-heart-fill"></i></span>
+                                </div>
+                                <img class="img-fluid" src="assets/images/listing5.avif" alt="hotal image" width="auto" height="auto"/>
+                              </div>
+                            </div>
+                           
+                            
+                          </div>
+                          <div class="content">
+                            <div class="card-header">
+                              <div class="card-title"><a class="card-title-link" href="detail.html">Lagoon Day Trip from Natal</a></div>
+                              <div class="card-subtitle"><span class="activity link1"><a class="activity-link sublink" href="#">Boating & Sailing </a> </span><span class="city link1"><a class="city-link sublink" href="#">| Natal</a> </span></div>
+                            </div>
+                            <div class="card-detail">
+                              <div class="card-price">
+                                <div class="group">
+                                  <span class="cut-price d-none"><del>€3,500</del></span>
+                                  Per Group
+                                </div>
+                                <div class="price">
+                                  €5,500
+                                </div>
+                              </div>
+                              <div class="card-rating">
+                                <div class="rating-icon">
+                                  <i class="bi bi-star"></i>
+                                  <i class="bi bi-star"></i>
+                                  <i class="bi bi-star"></i>
+                                  <i class="bi bi-star"></i>
+                                  <i class="bi bi-star"></i>
+                                </div>
+                                <span>0.0(1)</span>
+                              </div>
+                            </div>
+                            <div class="card-footer">
+                              <div class="card-duration">
+                                <span class="duration-icon"><i class="bi bi-clock"></i></span>
+                                <span class="duration-days">8 Days</span>
+                              </div>
+                              <div class="card-service">
+                                <ul>
+                                  <li>
+                                    <span class="service-icon"><i class="bi bi-check2"></i></span>
+                                    <span class="service-text">Free cancellation</span>
+                                  </li>
+                                  <li>
+                                    <span class="service-icon"><i class="bi bi-check2"></i></span>
+                                    <span class="service-text">Pickup</span>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="listing-card">
+                        <div class="listing-image-wraper">
+                          
+                          <div class="owl-carousel owl-theme listing-card-slider">
+                            <div class="listing-slider-item">
+                              <div class="discount-wish">
+                                <span class="discount card-badge">
+                                  <span class="discount-text d-none">30%</span></span>
+                                <span class="wishlist"><i class="bi bi-heart-fill"></i></span>
+                              </div>
+                              <img class="img-fluid" src="assets/images/listing6.avif" alt="hotal image" width="auto" height="auto"/>
+                            </div>
+                            <div class="listing-slider-item">
+                              <div class="discount-wish">
+                                <span class="discount card-badge">
+                                  <span class="discount-text d-none">30%</span></span>
+                                <span class="wishlist"><i class="bi bi-heart-fill"></i></span>
+                              </div>
+                              <img class="img-fluid" src="assets/images/listing6.avif" alt="hotal image" width="auto" height="auto"/>
+                            </div>
+                            <div class="listing-slider-item">
+                              <div class="discount-wish">
+                                <span class="discount card-badge">
+                                  <span class="discount-text d-none">30%</span></span>
+                                <span class="wishlist"><i class="bi bi-heart-fill"></i></span>
+                              </div>
+                              <img class="img-fluid" src="assets/images/listing6.avif" alt="hotal image" width="auto" height="auto"/>
+                            </div>
+                          </div>
+                         
+                          
+                        </div>
+                        <div class="content">
+                          <div class="card-header">
+                            <div class="card-title"><a class="card-title-link" href="detail.html">Lagoon Day Trip from Natal</a></div>
+                            <div class="card-subtitle"><span class="activity link1"><a class="activity-link sublink" href="#">Boating & Sailing </a> </span><span class="city link1"><a class="city-link sublink" href="#">| Natal</a> </span></div>
+                          </div>
+                          <div class="card-detail">
+                            <div class="card-price">
+                              <div class="group">
+                                <span class="cut-price d-none"><del>€3,500</del></span>
+                                Per Group
+                              </div>
+                              <div class="price">
+                                €5,500
+                              </div>
+                            </div>
+                            <div class="card-rating">
+                              <div class="rating-icon">
+                                <i class="bi bi-star"></i>
+                                <i class="bi bi-star"></i>
+                                <i class="bi bi-star"></i>
+                                <i class="bi bi-star"></i>
+                                <i class="bi bi-star"></i>
+                              </div>
+                              <span>0.0(1)</span>
+                            </div>
+                          </div>
+                          <div class="card-footer">
+                            <div class="card-duration">
+                              <span class="duration-icon"><i class="bi bi-clock"></i></span>
+                              <span class="duration-days">8 Days</span>
+                            </div>
+                            <div class="card-service">
+                              <ul>
+                                <li>
+                                  <span class="service-icon"><i class="bi bi-check2"></i></span>
+                                  <span class="service-text">Free cancellation</span>
+                                </li>
+                                <li>
+                                  <span class="service-icon"><i class="bi bi-check2"></i></span>
+                                  <span class="service-text">Pickup</span>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="pagination-wraper">
+                          <nav>
+                            <ul class="pagination">
+                              <li class="page-item active">
+                                <span class="page-link">1</span>
+                              </li>
+                              <li class="page-item"><a class="page-link" href="#">2</a></li>
+                              <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            </ul>
+                          </nav>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>  
+    </main>
+    <footer>
+        <section class="footer-main">
+          <div class="container">
+            <div class="footer-main-wraper">
+              <dov class="row">
+                <div class="col-lg-3">
+                  <div class="contact">
+                    <div class="footer-logo">
+                      <img class="img-fluid" src="assets/images/tzort-logo-white.png" alt="logo"/>
+                    </div>
+                    <div class="contact-content">
+                      <div class="contact-address">
+                        <span>201W.Big Beaver Road,</span>
+                        <span>Suit 500,Tray,M148084</span>
+                      </div>
+                      <div class="contact-mail">
+                        <a href="mailto:E-Mail: support@tzort.com">support@tzort.com</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-9">
+                  <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                      <div class="footer-column">
+                        <div class="footer-heading">Traveling</div>
+                        <ul class="footer-nav">
+                          <li class="footer-nav-list">
+                            <a class="footer-nav-link" href="#">Destination</a>
+                          </li>
+                          <li class="footer-nav-list">
+                            <a class="footer-nav-link" href="#">Resort</a>
+                          </li>
+                          <li class="footer-nav-list">
+                            <a class="footer-nav-link" href="#">Getaways</a>
+                          </li>
+                          <li class="footer-nav-list">
+                            <a class="footer-nav-link" href="#">Events</a>
+                          </li>
+                          <li class="footer-nav-list">
+                            <a class="footer-nav-link" href="#">Traverl Jourrny</a>
+                          </li>
+                          <li class="footer-nav-list">
+                            <a class="footer-nav-link" href="#">Trust & Safe</a>
+                          </li>
+                          <li class="footer-nav-list">
+                            <a class="footer-nav-link" href="#">Value</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                      <div class="footer-column">
+                        <div class="footer-heading">Interest</div>
+                        <ul class="footer-nav">
+                          <li class="footer-nav-list">
+                            <a class="footer-nav-link" href="#">Advanture Travel</a>
+                          </li>
+                          <li class="footer-nav-list">
+                            <a class="footer-nav-link" href="#">Art and Culture</a>
+                          </li>
+                          <li class="footer-nav-list">
+                            <a class="footer-nav-link" href="#">Beaches,and Islands</a>
+                          </li>
+                          <li class="footer-nav-list">
+                            <a class="footer-nav-link" href="#">Festivals</a>
+                          </li>
+                          <li class="footer-nav-list">
+                            <a class="footer-nav-link" href="#">Food and Drink</a>
+                          </li>
+                          <li class="footer-nav-list">
+                            <a class="footer-nav-link" href="#">Honeymoon</a>
+                          </li>
+                          <li class="footer-nav-list">
+                            <a class="footer-nav-link" href="#">Road Trips</a>
+                          </li>
+                          <li class="footer-nav-list">
+                            <a class="footer-nav-link" href="#">Sustainable Travel</a>
+                          </li>
+                          <li class="footer-nav-list">
+                            <a class="footer-nav-link" href="#">Travel Gear and Touch</a>
+                          </li>
+                          <li class="footer-nav-list">
+                            <a class="footer-nav-link" href="#">Travel on Budget</a>
+                          </li>
+                          <li class="footer-nav-list">
+                            <a class="footer-nav-link" href="#">Wildlife and Nature</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                      <div class="footer-column">
+                        <div class="footer-heading">Company</div>
+                        <ul class="footer-nav">
+                          <li class="footer-nav-list">
+                            <a class="footer-nav-link" href="#">About Us</a>
+                          </li>
+                          <li class="footer-nav-list">
+                            <a class="footer-nav-link" href="#">Team</a>
+                          </li>
+                          <li class="footer-nav-list">
+                            <a class="footer-nav-link" href="#">Careers</a>
+                          </li>
+                          <li class="footer-nav-list">
+                            <a class="footer-nav-link" href="#">Business</a>
+                          </li>
+                          <li class="footer-nav-list">
+                            <a class="footer-nav-link" href="#">Press</a>
+                          </li>
+                          <li class="footer-nav-list">
+                            <a class="footer-nav-link" href="#">Contact</a>
+                          </li>
+                          
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                      <div class="footer-column">
+                        <div class="footer-heading">Social</div>
+                        <ul class="footer-nav">
+                          <li class="footer-nav-list">
+                            <a class="footer-nav-link" href="#"><i class="fa-brands fa-facebook"></i>Facebook</a>
+                          </li>
+                          <li class="footer-nav-list">
+                            <a class="footer-nav-link" href="#"><i class="fa-brands fa-instagram"></i>Instagram</a>
+                          </li>
+                          <li class="footer-nav-list">
+                            <a class="footer-nav-link" href="#"><i class="fa-brands fa-twitter"></i>Twitter</a>
+                          </li>
+                          <li class="footer-nav-list">
+                            <a class="footer-nav-link" href="#"><i class="fa-brands fa-linkedin"></i>Linked In</a>
+                          </li>
+                          
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </dov>
+            </div>
+          </div>
+        </section>
+        <section class="footer-bottom">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="footer-bottom-topbar">
+                  <span class="detail">Tzort is not affiliated any resort brand.It represent individual timeshare
+                    owner to connect them directly with guests.
+                  </span>
+                  <span class="language">English(US)</span>
+                </div>
+                <div class="footer-bottom-copyright">
+                  <span>Copyright©2022 TZort resort.All right reserved.No part of this site may be reproduced with our written permission.</span>
+                  <span>
+                    <ul>
+                      <li>
+                        <a class="footer-bottom-link" href="#">Cookie</a>
+                      </li>
+                      <li>
+                        <a class="footer-bottom-link" href="#">privacy</a>
+                      </li>
+                      <li>
+                        <a class="footer-bottom-link" href="#">Legal Information</a>
+                      </li>
+                    </ul>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </footer>
+     <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous"></script>
+    <script>
+       
+            $('.listing-slider').owlCarousel({
+                loop: false,
+                margin: 15,
+                nav: true,
+                dots:false,
+                responsive: {
+                    0: {
+                        items: 2
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 6
+                    }
+                }
+            })
+            $('.listing-card-slider').owlCarousel({
+              loop: false,
+              margin: 15,
+              nav: true,
+              dots:false,
+              responsive: {
+                  0: {
+                      items: 1
+                  },
+                  600: {
+                      items: 1
+                  },
+                  1000: {
+                      items: 1
+                  }
+              }
+          })
+   /*---------------------------------------*/
+          document.querySelector(".flatpickr").flatpickr({
+            inline: false,
+            showMonths: 2,
+          });
+        
+          
+       
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.0/nouislider.min.js"></script>
+    <script>
+      const slider = document.getElementById('slider');
+      const lowButton = document.getElementById('lowButton');
+      const highButton = document.getElementById('highButton');
+  
+      noUiSlider.create(slider, {
+        start: [0, 100],
+        connect: true,
+        range: {
+          'min': 0,
+          'max': 100
+        }
+      });
+  
+      slider.noUiSlider.on('update', (values) => {
+        const lowValue = parseInt(values[0]);
+        const highValue = parseInt(values[1]);
+        lowButton.textContent = ` ${lowValue}`;
+        highButton.textContent = ` ${highValue}`;
+      });
+    </script>
+</body>
+</html>
